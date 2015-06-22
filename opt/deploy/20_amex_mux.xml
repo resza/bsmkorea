@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="amex">
+ <in>amex-receive</in>
+ <out>amex-send</out>
+ <unhandled>amex-unhandled</unhandled>
+</mux>

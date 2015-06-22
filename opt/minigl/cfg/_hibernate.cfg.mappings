@@ -1,0 +1,13 @@
+
+        <mapping resource="org/jpos/gl/GLUser.hbm.xml"/>
+        <mapping resource="org/jpos/gl/GLPermission.hbm.xml"/>
+        <mapping resource="org/jpos/gl/Currency.hbm.xml"/>
+        <mapping resource="org/jpos/gl/Journal.hbm.xml"/>
+        <mapping resource="org/jpos/gl/Account.hbm.xml"/>
+        <mapping resource="org/jpos/gl/GLTransaction.hbm.xml"/>
+        <mapping resource="org/jpos/gl/GLEntry.hbm.xml"/>
+        <mapping resource="org/jpos/gl/RuleInfo.hbm.xml"/>
+        <mapping resource="org/jpos/gl/Checkpoint.hbm.xml"/>
+        <mapping resource="org/jpos/gl/AccountLock.hbm.xml"/>
+        <mapping resource="org/jpos/gl/Layer.hbm.xml"/>
+

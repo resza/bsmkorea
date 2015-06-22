@@ -1,0 +1,24 @@
+import java.util.*;
+import org.jpos.ee.*;
+import org.hibernate.*;
+
+DB db = new DB();
+//db.createSchema (null, true);
+
+db.open();
+
+Transaction tx = db.beginTransaction();
+User user = new User();
+// user='admin', password='test'
+user.setNick ("admin");
+user.setPassword ("66d4aaa5ea177ac32c69946de3731ec0");
+user.setName ("System Administrator");
+user.grant ("login");
+user.grant ("operator");
+user.grant ("useradmin");
+user.grant ("sysconfig");
+user.grant ("admin");
+db.session().save (user);
+
+tx.commit();
+db.close();

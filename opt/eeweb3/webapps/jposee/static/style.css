@@ -1,0 +1,357 @@
+
+form {
+  padding:0;
+  margin:0;
+}
+
+pre {
+  font-size: 120%;
+  BORDER-TOP-STYLE: groove;
+  FONT-FAMILY: "Courier New", Courier, mono;
+  BORDER-RIGHT-STYLE: groove;
+  BORDER-LEFT-STYLE: groove;
+  BACKGROUND-COLOR: #e6e2ff;
+  BORDER-BOTTOM-STYLE: groove;
+}
+
+a {
+   text-decoration: none; 
+   color: black
+}
+
+a:visited { 
+   text-decoration: none; 
+   color: #404040 
+}
+
+.topcontent { 
+    height: 50px; 
+    background-color: #fff; 
+}
+
+.topbar { 
+    margin: 0px 10px; 
+    color: #1393c0; 
+    border-left: #ccc 0px dotted; 
+    border-bottom: #ccc 0px dotted; 
+}
+
+ul.top_nav {
+    padding: 0px;
+    margin: 0px;
+    background-color: #1393C0;
+    color: White;
+    float: left;
+    width: 100%;
+    list-style:none;
+    }
+ul.top_nav li {
+    float:right;
+    padding: 0.2em 0.7em;
+    margin:0;
+    border-right: 1px solid #fff;
+}
+ul.top_nav li a {
+    background-color: #1393C0;
+    color: White;
+    text-decoration: none;
+    margin:0;
+}
+ul.top_nav li.last {
+    border-right:0;
+}
+ul.top_nav li a.error {
+    color: #f00;
+    padding-right: 8px;
+    font-weight: bold;
+}
+ul.top_nav li a:hover {
+    color: #fff;
+    text-decoration:underline;
+}
+ul.top_nav li a:visited {
+    color: #fff;
+}
+.top_nav {
+    clear: both;
+}
+
+.goButton {
+  border:0;
+}
+
+.button,a.button:hover{
+  border: 1px solid;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #000000;
+  background-color: #FCFCFC;
+  background-image: url("/jposee/images/menu_bg.gif");
+}
+
+.leftpane {
+  width:300px;
+  float:left;
+  padding:1px;
+  padding-left:10px;
+  border-right: 0px dotted #666;
+  border-bottom: 0px dotted #666;
+}
+
+.halfpane {
+  width:60%;
+  float:left;
+  padding:1px;
+  padding-left:10px;
+  border-right: 0px dotted #666;
+  border-bottom: 0px dotted #666;
+}
+
+.rightpane {
+  width:70%;
+  float:right;
+  padding:1px;
+  padding-left:10px;
+  border-right: 0px dotted #666;
+  border-bottom: 0px dotted #666;
+}
+
+.fullpane {
+  width:99%;
+  float:left;
+  padding:0px;
+  padding-left:7px;
+  padding-right:0px;
+  border-left: 0px dotted #666;
+  border-right: 0px dotted #666;
+  border-bottom: 0px dotted #666;
+}
+
+.hnav {
+  font-size: 1.0em;
+  padding-left: 10px;
+  color:#444;
+}
+
+.navbar {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none; 
+}
+
+.tabs {
+  float:left;
+  width:100%;
+  background:#fff url("images/tbg.gif") repeat-x bottom;
+  font-size: 1.0em;
+  line-height:normal;
+  margin-bottom:10px;
+}
+.tabs ul {
+  margin:0;
+  padding:3px 5px 0;
+  list-style:none;
+}
+.tabs li {
+  float:left;
+  background:url("images/tl.gif") no-repeat left top;
+  margin:0;
+  padding:0 0 0 6px;
+  border-bottom:1px solid #666;
+}
+
+.tabs a {
+  float:left;
+  display:block;
+  width:.1em;
+  background:url("images/tr.gif") no-repeat right top;
+  padding:5px 6px 4px 2px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#666;
+  word-break: keep-all;
+}
+.tabs > ul a {width:auto;}
+  /* Commented Backslash Hack hides rule from IE5-Mac \*/
+  .tabs a {float:none;}
+  /* End IE5-Mac hack */
+  .tabs a:hover {
+  color:#333;
+}
+.tabs .current {
+  background-position:0 -150px;
+  border-width:0;
+}
+.tabs .current a {
+  background-position:100% -150px;
+  padding-bottom:5px;
+  color:#333;
+}
+.tabs li:hover, .header li:hover a {
+  background-position:0% -150px;
+  color:#333;
+}
+.tabs li:hover a {
+  background-position:100% -150px;
+}
+
+.submitButton {
+ font-weight:bold;
+ font-family:Verdana, Arial, Helvetica, sans-serif;
+ font-size:11px;
+ color:#fff;
+ background:#1393C0;
+ border-right:1px outset #424341;
+ border-bottom:1px outset #424341;
+ border-left:1px outset #fff;
+ border-top:1px outset #fff;
+ height:25px;
+}
+
+.content-main {
+  width:98%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+}
+.content-footer {
+  width:98%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.searchbar {
+  padding: 2px;
+  font-size: 0.9em;
+  margin: 0;
+  margin: 0px 10px 0px 10px;
+}
+
+.blue { font-weight: bold; color: #4040FF;}
+.red  { font-weight: bold; color: #9c0000;}
+.grey { font-weight: bold; color: #444;}
+.green { font-weight: bold; color: #40FF40;}
+.rblue { font-weight: bold; color: #ffffff; background-color: #4040ff; }
+
+.label {
+  padding-left:.4em;
+  font-weight:bold;
+  color:#444;
+}
+
+.input {
+  # background:transparent; 
+  color: #000000;
+  width: 40%;
+}
+
+table {
+  border-color: #FF0000;
+  border-left-color: #c6d0e5;
+  border-bottom-color: #c6d0e5;
+  border-top-color: #c6d0e5;
+  border-right-color: #c6d0e5;
+  border-collapse: collapse;
+}
+table.border {
+  border-width: 0px;
+  border-style: solid;
+  BORDER-WIDTH: 1px;
+}
+
+.odd{
+  border-style: solid;
+  border-color:#9BA5BA;
+  BORDER-TOP-WIDTH: 1px;
+  BORDER-BOTTOM-WIDTH: 1px;
+  BORDER-LEFT-WIDTH: 1px;
+  BORDER-RIGHT-WIDTH: 1px;
+  BACKGROUND-COLOR: #f0f0ff;
+}
+
+.heading {
+  BACKGROUND-COLOR: #d2d2ff;
+  border-style: solid;
+  border-width: 1px;
+  border-color:#9BA5BA;
+  color: #101010;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+
+.even{
+  border-style: solid;
+  border-color:#9BA5BA;
+  BORDER-TOP-WIDTH: 1px;
+  BORDER-BOTTOM-WIDTH: 1px;
+  BORDER-WIDTH: 1px;
+  BORDER-LEFT-WIDTH: 1px;
+  BORDER-RIGHT-WIDTH: 1px;
+}
+
+
+
+
+#footer {
+  float:right;
+  width: 75%;
+  margin: 0;
+  padding: 0 3% 0 0;
+}
+
+#header {
+  float:top;
+  width: 100%;
+  margin: 0;
+  padding: 0 3% 0 0;
+}
+
+body {
+    font: 11px/1.5em "Lucida Grande";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: helvetica, arial, verdana, sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 218%;
+}
+
+h2 {
+    font-size: 164%;
+}
+
+h3 {
+    font-size: 145%;
+}
+
+h4 {
+    font-size: 118%;
+}
+
+.imageright {
+  position: 0 0 0 0;
+  float: right;
+  margin: 0;
+  padding: 0% 0% 0% 3%;
+}
+
+.imageleft {
+  float: left;
+  margin: 0;
+  padding: 0% 0% 0% 3%;
+}
+
+.imagecenter {
+  float: center;
+  margin: 0;
+  padding: 0% 0% 0% 3%;
+}
+
+

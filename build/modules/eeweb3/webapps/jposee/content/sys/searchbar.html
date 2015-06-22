@@ -1,0 +1,13 @@
+#if ($page.search)
+  <form name="search" action="$request.getRequestURI()" method="get" style="margin-bottom: 0pt; margin-top: 0pt;">
+  <select name="f">
+    <option value="summary" $!summary_selected>Summary</option>
+    <option value="type" $!type_selected>Type</option>
+    <option value="source" $!source_selected>Source</option>
+    <option value="detail" $!detail_selected>Detail</option>
+  </select>
+  <input name="q" type="text" value="$!q">
+  <input src="$request.contextPath/images/go.gif" class="goButton" type="image">
+  </form>
+#end
+

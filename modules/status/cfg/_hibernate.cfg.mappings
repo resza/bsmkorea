@@ -1,0 +1,4 @@
+  
+        <mapping resource="org/jpos/ee/status/Status.hbm.xml" />
+        <mapping resource="org/jpos/ee/status/StatusTag.hbm.xml" />
+

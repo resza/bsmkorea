@@ -1,0 +1,60 @@
+<div class="hnav">
+ #parse("repository:fs_repository://sys/hnav.html")
+</div>
+<hr>
+
+<div class="halfpane">
+#if ($e)
+ <table>
+  <tr>
+   <td align='right' class='label'>Id:&nbsp;</td>
+   <td width='100%'>$e.id</td>
+  </tr>
+  <tr>
+   <td align='right' class='label'>Date: &nbsp;</td>
+   <td>$dateUtil.dateTimeToString($e.date)</td>
+  </tr>
+  <tr>
+   <td align='right' class='label'>Source:&nbsp;</td>
+   <td>$e.source</td>
+  </tr>
+  <tr>
+   <td align='right' class='label'>Type:&nbsp;</td>
+   <td>$e.type</td>
+  </tr>
+  <tr>
+   <td align='right' class='label'>Severity:&nbsp;</td>
+   <td>$e.severityAsString ($e.severity)</td>
+  </tr>
+  <tr>
+   <td align='right' class='label'>Summary:&nbsp;</td>
+   <td>$e.summary</td>
+  </tr>
+ #if ($e.issuer != 0)
+  <tr>
+   <td align='right' class='label'>Issuer:&nbsp;</td>
+   <td><pre>$e.issuer</pre></td>
+  </tr>
+ #end
+ #if ($e.parent != 0)
+  <tr>
+   <td align='right' class='label'>Parent:&nbsp;</td>
+   <td><a href="$request.getRequestURI()?id=$e.parent">$e.parent</a></td>
+  </tr>
+ #end
+ #if ($e.detail)
+  <tr>
+   <td align='right' class='label'>Detail:&nbsp;</td>
+   <td>$e.detail</td>
+  </tr>
+ #end
+ #if ($e.trace)
+  <tr>
+   <td align='right' class='label'>Trace:&nbsp;</td>
+   <td><pre>$e.trace</pre></td>
+  </tr>
+ #end
+ </table>
+#end
+</div>
+

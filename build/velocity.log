@@ -1,0 +1,222 @@
+2015-06-22 11:27:18,337 - Log4JLogChute initialized using file 'velocity.log'
+2015-06-22 11:27:18,337 - The version of log4j being used does not support the "trace" level.
+2015-06-22 11:27:18,337 - *******************************************************************
+2015-06-22 11:27:18,337 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2015-06-22 11:27:18,337 - RuntimeInstance initializing.
+2015-06-22 11:27:18,337 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2015-06-22 11:27:18,337 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2015-06-22 11:27:18,338 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:116)
+	at org.jpublish.view.velocity.VelocityViewRenderer.init(VelocityViewRenderer.java:136)
+	at org.jpublish.SiteContext.load(SiteContext.java:1184)
+	at com.anthonyeden.lib.resource.FileResourceLoader.loadResource(FileResourceLoader.java:110)
+	at com.anthonyeden.lib.resource.FileResourceLoader.loadResource(FileResourceLoader.java:82)
+	at org.jpublish.SiteContext.init(SiteContext.java:165)
+	at org.jpublish.servlet.JPublishServlet.init(JPublishServlet.java:92)
+	at org.mortbay.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:431)
+	at org.mortbay.jetty.servlet.ServletHolder.doStart(ServletHolder.java:263)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:667)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1239)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:466)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:222)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.jpos.q2.jetty.Jetty6.startService(Jetty6.java:42)
+	at org.jpos.q2.QBeanSupport.start(QBeanSupport.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:622)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:74)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:622)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:277)
+	at com.sun.jmx.mbeanserver.StandardMBeanIntrospector.invokeM2(StandardMBeanIntrospector.java:112)
+	at com.sun.jmx.mbeanserver.StandardMBeanIntrospector.invokeM2(StandardMBeanIntrospector.java:46)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:226)
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:253)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:856)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:805)
+	at org.jpos.q2.QFactory.startQBean(QFactory.java:199)
+	at org.jpos.q2.Q2.start(Q2.java:464)
+	at org.jpos.q2.Q2.deploy(Q2.java:282)
+	at org.jpos.q2.Q2.start(Q2.java:183)
+	at org.jpos.q2.Q2.main(Q2.java:651)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+	... 55 more
+2015-06-22 11:27:18,339 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2015-06-22 11:27:18,339 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2015-06-22 11:27:18,341 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2015-06-22 11:27:18,343 - ResourceLoader instantiated: org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:18,353 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2015-06-22 11:27:18,353 - Default ResourceManager initialization complete.
+2015-06-22 11:27:18,354 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2015-06-22 11:27:18,355 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2015-06-22 11:27:18,357 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2015-06-22 11:27:18,358 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2015-06-22 11:27:18,359 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2015-06-22 11:27:18,378 - Created '20' parsers.
+2015-06-22 11:27:18,384 - Velocimacro : initialization starting.
+2015-06-22 11:27:18,384 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2015-06-22 11:27:18,384 - Velocimacro : adding VMs from VM library : VM_global_library.vm
+2015-06-22 11:27:18,388 - ResourceManager : found VM_global_library.vm with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:18,388 - Velocimacro : VM library registration complete.
+2015-06-22 11:27:18,388 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2015-06-22 11:27:18,388 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2015-06-22 11:27:18,388 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2015-06-22 11:27:18,388 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2015-06-22 11:27:18,388 - Velocimacro : Velocimacro : initialization complete.
+2015-06-22 11:27:18,388 - RuntimeInstance successfully initialized.
+2015-06-22 11:27:21,953 - ResourceManager : found template://basic.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:21,962 - Velocimacro : added #rowClass(  ) : source = repository:fs_repository://inc/macros.html
+2015-06-22 11:27:21,976 - Velocimacro : added #selectState(  state ) : source = repository:fs_repository://inc/macros.html
+2015-06-22 11:27:21,985 - Velocimacro : added #selectStateAsString(  state ) : source = repository:fs_repository://inc/macros.html
+2015-06-22 11:27:21,992 - Velocimacro : added #showState(  state ) : source = repository:fs_repository://inc/macros.html
+2015-06-22 11:27:22,019 - ResourceManager : found repository:fs_repository://inc/macros.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:22,022 - Velocimacro : added #placeMenu(  m ) : source = repository:fs_repository://navigation/menu-macro.html
+2015-06-22 11:27:22,024 - ResourceManager : found repository:fs_repository://navigation/menu-macro.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:22,030 - ResourceManager : found repository:fs_repository://navigation/menu-head.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:22,037 - ResourceManager : found repository:fs_repository://inc/topbar.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:22,045 - ResourceManager : found repository:fs_repository://navigation/menu.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:22,046 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:22,050 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:22,054 - ResourceManager : found repository:fs_repository:///login.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:39,431 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:39,431 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:40,430 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:40,430 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,766 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:43,766 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,766 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:43,769 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,771 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,771 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,771 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:43,771 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,772 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,854 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:43,854 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,854 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:43,854 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,855 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,855 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,855 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:43,855 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,856 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:43,856 - ResourceManager : found repository:fs_repository:///index.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:47,713 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:47,713 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:47,715 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:47,715 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:47,715 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:47,716 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:47,716 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:47,717 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:47,717 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:47,720 - ResourceManager : found repository:fs_repository:///user/list.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:47,721 - ResourceManager : found repository:fs_repository://user/hnav.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:27:52,162 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:52,163 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:52,163 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:52,164 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:52,164 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:52,166 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:52,166 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:27:52,166 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:52,167 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:27:52,182 - ResourceManager : found repository:fs_repository:///user/add.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:29:09,898 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:09,899 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:09,899 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:09,899 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:09,900 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:09,900 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:09,901 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:09,901 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:09,901 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:12,554 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:12,554 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:12,555 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:12,555 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:12,556 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:12,557 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:12,558 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:12,558 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:12,559 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:42,629 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:42,629 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:42,630 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:42,630 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:42,631 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:42,632 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:42,632 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:42,632 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:42,633 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:46,710 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:46,710 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:46,710 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:46,710 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:46,711 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:46,712 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:46,712 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:46,712 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:46,713 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:53,969 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:53,970 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:29:53,971 - ResourceManager : found repository:fs_repository:///logout.html with loader org.jpublish.view.velocity.JPublishResourceLoader
+2015-06-22 11:29:55,689 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:29:55,689 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:03,752 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:03,752 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:03,777 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:15,392 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:15,393 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:23,088 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:23,088 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:26,009 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:26,009 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:26,037 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:26,037 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:26,038 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:26,038 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:26,039 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:26,039 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:26,040 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:26,040 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:26,041 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:29,267 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:29,267 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:29,267 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:29,267 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:29,268 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:29,268 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:29,268 - The iterative object in the #foreach() loop at repository:fs_repository://navigation/menu.html [line 0, column 0] is of type java.util.Iterator.  Because it is not resettable, if used in more than once it may lead to unexpected results.
+2015-06-22 11:30:29,268 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:29,268 - Null reference [template 'repository:fs_repository://navigation/menu.html', line 1, column 33] : $m.nodeType-- cannot be resolved.
+2015-06-22 11:30:29,271 - ResourceManager : found repository:fs_repository:///bsmkorea/module.html with loader org.jpublish.view.velocity.JPublishResourceLoader

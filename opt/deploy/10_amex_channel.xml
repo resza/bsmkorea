@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<channel-adaptor name='amex-adaptor' 
+    class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+ <channel name="amexChannel" class="org.jpos.iso.channel.NACChannel" packager="org.jpos.iso.packager.GenericPackager" logger="Q2" header="6000100000">
+  <property name="packager-config" value="cfg/jatimas.xml" />
+  <property name="host" value="177.155.122.14" />
+  <property name="port" value="7444" />
+ </channel>
+ <in>amex-send</in>
+ <out>amex-receive</out>
+ <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

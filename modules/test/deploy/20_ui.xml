@@ -1,0 +1,41 @@
+<qbean class="org.jpos.q2.ui.UI" name="UI" logger="Q2">
+ <ui width="800" height="600" full-screen="false" undecorated="false" close="true">
+  <caption>Test Kirim ISO8583</caption>
+  <menubar id="MAIN">
+   <menu id="File" accesskey="f">
+    <menuitem id="Quit" accesskey="Q" action="exit" />
+   </menu>
+  </menubar>
+  <components>
+   <border-layout>
+    <north>
+     <button action="init" command="cfg/initdb.bsh">init</button>
+     <button action="inqPayment">"inqPayment"</button>
+     <button action="inqInstall">inqInstall</button>
+     <button action="purchase">Purchase</button>
+     <button action="payment">Payment</button>
+     <button action="install">Install</button>
+    </north>
+    <center>
+     <vsplit divider="200">
+      <top>
+       <!-- <iso-meter idref="channel.jatimas-channel-adaptor" /> -->
+      </top>
+      <bottom>
+       <log-listener scrollable="true" logger="Q2" font="fixed-normal-12" max-events="50" max-lines="500" />
+      </bottom>
+     </vsplit>
+    </center>
+    <south>
+     <label font="arial-italic-10">jPOS.org</label>
+    </south>
+   </border-layout>
+  </components>
+ </ui>
+ <object class="org.jpos.bsh.BSHAction" id="init" />
+ <object class="id.co.keriss.biller.ui.action.InqPayment" id="inqPayment" />
+ <object class="id.co.keriss.biller.ui.action.InqInstallment" id="inqInstall" />
+ <object class="id.co.keriss.biller.ui.action.Purchase" id="purchase" />
+ <object class="id.co.keriss.biller.ui.action.Payment" id="payment" />
+ <object class="id.co.keriss.biller.ui.action.Installment" id="install" />
+</qbean>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="id.co.keriss.switching.ee">
+ <class name="Role">
+  <id column="id" name="id" type="java.lang.Long">
+   <generator class="sequence">
+    <param name="sequence">role_sequence</param>
+   </generator>
+  </id>
+  <property name="name" type="string"></property>
+  <set name="moduleperm" inverse="true">
+		<key column="role"/>
+		<one-to-many class="id.co.keriss.switching.ee.Moduleperm"/>
+  </set>
+  <set name="share" inverse="true">
+		<key column="role"/>
+		<one-to-many class="id.co.keriss.switching.ee.Share"/>
+  </set>
+ </class>
+</hibernate-mapping>

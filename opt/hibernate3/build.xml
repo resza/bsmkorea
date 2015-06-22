@@ -1,0 +1,42 @@
+<project name="jPOS-EE-hibernate3" basedir="../.." default="config">
+ <property file="build.properties"/>
+ <property name="module.name" value="hibernate3" />
+ <property name="module.lib.dir" value="${modules.dir}/${module.name}/lib"/>
+ <property name="module.cfg.dir" value="${modules.dir}/${module.name}/cfg"/>
+
+ <target name="prepare" />
+ <target name="config">
+  <echo message="hibernate3: generating ${build.cfg}/hibernate.cfg.xml" />
+  <copy 
+   file="${module.cfg.dir}/_hibernate.cfg.head" 
+   tofile="${build.cfg}/hibernate.cfg.tmp" overwrite="true" />
+  <filter filtersfile="${target}.properties" />
+  <concat destfile="${build.cfg}/hibernate.cfg.tmp" append="true" force="true">
+   <path>
+     <fileset dir="${modules.dir}" excludesfile="${modules.ignore.list}">
+      <include name="**/cfg/_hibernate.cfg.properties"/>
+     </fileset>
+   </path>
+  </concat>
+  <concat destfile="${build.cfg}/hibernate.cfg.tmp" append="true" force="true">
+   <path>
+     <fileset dir="${modules.dir}" excludesfile="${modules.ignore.list}">
+      <include name="**/cfg/_hibernate.cfg.mappings"/>
+     </fileset>
+   </path>
+  </concat>
+  <concat destfile="${build.cfg}/hibernate.cfg.tmp" append="true" force="true">
+   <path>
+     <fileset dir="${module.cfg.dir}">
+      <include name="_hibernate.cfg.tail"/>
+     </fileset>
+   </path>
+  </concat>
+  <copy 
+   file="${build.cfg}/hibernate.cfg.tmp" 
+   filtering="true"
+   tofile="${build.cfg}/hibernate.cfg.xml" overwrite="true" />
+  <delete file="${build.cfg}/hibernate.cfg.tmp" />
+ </target>
+</project>
+

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd `dirname $0`/../build || exit 1
+rm -f deploy/shutdown.xml
+java -server \
+    -Dorg.mortbay.xml.XmlParser.NotValidating=true \
+    -jar Lounge.jar "$*"
+

@@ -1,0 +1,56 @@
+<br>
+#set ($uri = "$request.getRequestURI()")
+#set ($path = "$request.getContextPath()")
+
+#if ($message)
+ <div class='hnav'>
+  <br><br>
+  <span class='rblue'>$message</span>
+  <br>
+  You can view the results in the <a href="$path/sys/syslog.html">System Log</a><br/>
+  <font size='-2'><i>Note: Make sure to enable <em>info</em> events</i></font>
+ </div>
+#else
+<div class='halfpane'>
+ <h2><u>FDR Extract Generator</u></h2>
+ <p>
+  The FDR extract runs automatically on a regular basis. 
+  However, you can use this page to schedule the re-generation 
+  of a previous batch.
+ </p>
+ <br/>
+
+ #if ($captureDateError) 
+  <span class='red'>The date you have entered is not correct. Please try again</span>
+  <br/>
+ #end
+
+ <form action="$uri" method="post" name='extractform'>
+  <table>
+   <tr>
+    <td valign='top' align='right'><label>Capture Date:</label></td>
+    <td valign='top'><input type="text" name="captureDate" value="$!captureDate"/><br/>(mm/dd/yyyy)</td>
+    <td valign='top'>&nbsp;<a href="javascript:cal1.popup();"><img src="/jposee/js/img/cal.gif" width="16" height="16" border="0"
+     alt="Click Here to Pick up the date"></a></td>
+    </td>
+   </tr>
+   <tr><td colspan='2'>&nbsp;</td></tr>
+   <tr>
+    <td valign='top' align='right'>
+     <input type='submit' value='Generate File' />
+    </td>
+   </tr>
+  </table>
+ </form>
+</div>
+
+<script language="JavaScript">
+  <!--
+  var cal1 = new
+  calendar(document.forms['extractform'].elements['captureDate']);
+  cal1.year_scroll = true;
+  cal1.time_comp = false;
+  //-->
+</script>
+
+#end

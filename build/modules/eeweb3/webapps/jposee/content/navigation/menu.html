@@ -1,0 +1,18 @@
+##parse("repository:fs_repository://navigation/menu-macro.html")
+##<!-- ########################## GRC Masthead Menu ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+
+<div class="menu">
+<ul >
+
+#foreach ($m in $menu.iterator()) 
+##if($velocityCount>1) ##<li><span class="qmdivider qmdividery" ></span></li> #end
+		#placeMenu($m ) 
+
+#end
+</ul>
+</div> <!-- close "menu" div -->
+</div></div></div> <!-- close the "minwidth" wrappers -->
+
+##<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->

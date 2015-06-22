@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+#set($next = $pages.page + 2)
+
+#if($pages.isPreviousPage())
+
+#if($pages.page > 1)
+<<
+<a href="$pagelink&page=1">
+First - </a>
+#end
+
+<
+<a href="$pagelink&page=$!pages.page">
+previous</a> -
+#end
+#set($x = $pages.page + 1)
+#if($lastPage==0)#set ($lastPage = 1) #end
+&nbsp; page: $x &nbsp; of: $lastPage &nbsp;
+#if($pages.isNextPage())
+-
+<a href="$pagelink&page=$!next">
+next</a>>
+
+<a href="$pagelink&page=$lastPage">
+ - Last</a>>>
+
+#end
+
+</body>
+</html>

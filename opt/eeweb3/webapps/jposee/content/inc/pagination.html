@@ -1,0 +1,42 @@
+
+  #if ($currentPage && $maxPage != "1")
+  <form name="pagination" action="$uri" method="get">
+  <tr class='gray'>
+    <td align='center' colspan='7' nowrap>
+     #if ($firstPage)
+        &nbsp;&nbsp;
+        <a href="$firstPage">|&lt;</a>
+     #else
+        <font color="grey">|&lt;</font>
+     #end
+     #if ($previousPage)
+        <a href="$previousPage">&lt;</a>
+     #else
+      <font color="grey">&lt;</font>
+     #end
+     &nbsp;&nbsp;
+     Page 
+     <input type="text" name="page" size="$currentPage.length()" maxlength="5" value="$currentPage" "> 
+     / $maxPage
+     &nbsp;&nbsp;
+     #if ($nextPage)
+        <a href="$nextPage">&gt;</a>
+     #else
+       <font color="grey">&gt;</font>
+     #end
+     #if ($lastPage)
+        &nbsp;&nbsp;
+        <a href="$lastPage">&gt;|</a>
+     #else
+       <font color="grey">&gt;|</font>
+     #end
+     </td>
+  </tr>
+  #if ($f)
+      <input type="hidden" name="f" value="$f" />
+  #end
+  #if ($q)
+      <input type="hidden" name="q" value="$q" />
+  #end
+  </form>
+  #end

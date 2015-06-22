@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="title">Transactions/Show</property>
+    <property name="tab">Transactions</property>
+    <property name="perms">login</property>
+    <property name="search">txn/showsearchbar.html</property>
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="org.jpos.ee.action.txn.Show" />
+</page>
+

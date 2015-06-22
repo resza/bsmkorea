@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<channel-adaptor name="testChannelAdapter" class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" realm="testCon">
+ <channel name="testChannel" class="org.jpos.iso.channel.NACChannel" packager="org.jpos.iso.packager.ISO87BPackager" logger="Q2" header="600010000">  
+  <property name="host" value="127.0.0.1" />
+  <property name="port" value="5001" />
+ </channel>
+ <in>sending</in>
+ <out>receiving</out>
+ <reconnect-delay>5000</reconnect-delay>
+</channel-adaptor>

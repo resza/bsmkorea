@@ -1,0 +1,52 @@
+#set ($uri = "$request.getRequestURI()")
+#set ($images = "$request.contextPath/images/")
+
+<div class="hnav">
+ #parse("repository:fs_repository://sys/hnav.html")
+</div>
+
+<div class="halfpane">
+  <br>
+  <table border="0" cellpadding="0" cellspacing="0" width="99%" border="1"> 
+   <tr>
+    <th align='left' class='rblue'>Type</th>
+    <th align='left' class='rblue'>EndPoint</th>
+    <th align='left' class='rblue'>BIN Range(s)</th>
+    <th align='center' class='rblue' colspan='2'>Limits</th>
+   </tr>
+   <tr>
+    <th align='left' class='rblue'>&nbsp</th>
+    <th align='left' class='rblue'>&nbsp</th>
+    <th align='left' class='rblue'>&nbsp</th>
+    <th align='left' class='rblue' nowrap>Floor</th>
+    <th align='left' class='rblue' nowrap>&nbsp;Stand-IN</th>
+   </tr>
+   #foreach ($cardtype in $cardtypes)
+    <input type="hidden" name="id" value="$cardtype.id" />
+    <tr height="25px">
+     <td width="25%" nowrap valign='top'>
+       <a href="cardtypeshow.html?id=$!cardtype.id"><strong>$!cardtype.name</strong></a>
+     </td>
+     <td width="25%" nowrap valign='top'>
+       <strong>$!cardtype.endPoint</strong>
+     </td>
+     <td width="60%" valign='top'>
+      #foreach ($bin in $cardtype.bins)
+       $bin.start .. $bin.end <br>
+      #end
+     </td>
+     <td align='right' valign='top'>$!cardtype.floor</td>
+     <td align='right' valign='top'>$!cardtype.standInFloor</td>
+    </tr>
+    <tr>
+     <td colspan="5"><hr/></td>
+    </tr>
+   #end
+   <tr>
+    <td colspan='5' class='label' align='right'>
+     <a href="cardtypeadd.html">Add new</a>
+    </td>
+  </table>
+  <br>
+</div>
+

@@ -1,0 +1,114 @@
+ <script src="${request.getContextPath()}/js/md5.js" type="text/javascript"></script>
+ <script src="${request.getContextPath()}/js/cookies.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+function doHash(frm) {
+    var username = frm.nick.value;
+    var password = frm.oldpassword.value;
+    var newpassword  = frm.pass.value;
+    var newpassword2 = frm.pass2.value;
+
+    if (username.length < 3 || password.length < 3) {
+        alert ("Invalid Username and/or Password.");
+        return false;
+    }
+    if (newpassword.length < 3 || newpassword != newpassword2) {
+        alert ("Invalid new password.");
+        return false;
+    }
+    var hash     = frm.hash.value;
+    var seed     = readCookie ("JSESSIONID") + hash;
+    var md5seed  = hex_md5 (seed);
+    var pass     = hex_md5 (username + password);
+    var newpass  = hex_md5 (username + newpassword);
+    var newpass2 = hex_md5 (username + newpassword2);
+
+    frm.oldpassword.readOnly = true;
+    frm.oldpassword.value = hex_md5 (seed + pass);
+
+    frm.pass.readOnly = true;
+    frm.pass.value = hexor (hexor (newpass, pass), md5seed);
+
+    frm.pass2.readOnly = true;
+    frm.pass2.value = hexor (hexor (newpass2, pass), md5seed);
+}
+
+-->
+</script>
+
+<div class="hnav">
+  #parse("repository:fs_repository://user/hnav.html")
+</div>
+
+#set( $rowCount = 0 )
+
+<div class="content-main">
+ <br>
+ <form name="edit" action="$request.getRequestURI()" method="POST""
+  #if ($passwd) autocomplete="off" onSubmit="return doHash(this)" #end >
+
+ <table border="1" width="40%" align="left">
+  <tr class="#rowClass()">
+   <th colspan="2" align="left">My Profile</th>
+  </tr>
+  <tr class="#rowClass()">
+   <td width="10%" class="label">Nick: </td>
+   <td>
+    <input class="input" disabled type="text" name="nick" value="$nick" size="16" />
+   </td>
+  </tr>
+  <tr class="#rowClass()">
+   <td width="10%" class="label">Name: </td>
+   <td>
+    <input type="text" name="name" class="input" value="$name" size="16" />
+    #if ($errorName)
+     <font size="-2" class="red">&lt;-- $errorName</font>
+    #end
+   </td>
+  </tr>
+  #if ($passwd)
+  <tr class="#rowClass()">
+   <td width="15%" class="label">Old Password: </td>
+   <td>
+    <input type="password" class="input" name="oldpassword" size="16"/>
+    #if ($errorOldPass)
+     <font size="-2" class="red">&lt;-- $errorOldPass</font>
+    #end
+   </td>
+  </tr>
+  <tr class="#rowClass()">
+   <td width="15%" class="label">New Password: </td>
+   <td>
+    <input type="password" class="input" name="pass" size="16"/>
+    #if ($errorPass)
+     <font size="-2" class="red">&lt;-- $errorPass</font>
+    #end
+   </td>
+  </tr>
+  <tr class="#rowClass()">
+   <td width="15%" class="label">Repeat: </td>
+   <td>
+    <input type="password" class="input" name="pass2" size="16"/>
+    #if ($errorPass2)
+     <font size="-2" class="red">&lt;-- $errorPass2</font>
+    #end
+   </td>
+  </tr>
+  <input type="hidden" name="hash" value="$!hash" />
+  #end
+  <tr class="#rowClass()">
+   <td colspan="2" class="hnav" align="right">
+  #if (! $passwd)
+   <a href="${request.getRequestURI()}?passwd=y">Change password</a>
+  #end
+    <input name="action" src="${request.getContextPath()}/images/go.gif" class="goButton" type="image" value="Update">&nbsp;&nbsp;
+   </td>
+  </tr>
+ </table>
+ </form>
+</div>
+
+<script language="javascript">
+ document.edit.name.focus();
+</script>
+

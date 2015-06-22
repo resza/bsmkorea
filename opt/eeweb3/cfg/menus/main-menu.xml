@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu name="main"> 
+    <node name="System">
+        <node name="SysLog" url="sys/syslog.html"  permissions="login"/>
+        <separator/>
+        <node url="sys/sysconfig.html" name="Configuration" permissions="sysconfig" weight="10"/>
+    </node>
+    <node name="Users" permissions="useradmin" weight="10">
+        <node name="List" url="user/list.html"/>
+        <node name="Add" url="user/add.html"/>
+    </node>
+</menu>
+

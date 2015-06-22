@@ -1,0 +1,22 @@
+group jpos;
+
+directions ::= [
+ "1":"(Incoming)",
+ "2":"(Outgoing)",
+ default:"" 
+]
+
+java_lang_Object(o) ::= "$o$"
+
+org_jpos_util_LogEvent(realm,date,tag,evt) ::= <<
+### $date;format="dd/MM/yyyy hh:mm:ss.SSS"$ #############################
+# $realm$/$tag$
+#
+$evt:{ $it$$\n$}$
+>>
+
+org_jpos_transaction_Context(o) ::= <<
+$o.map.keys:{
+k| $k$:$o.map.(k)$$\n$}
+$>>
+

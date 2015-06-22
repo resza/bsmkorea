@@ -1,0 +1,8 @@
+
+        <mapping resource="org/jpos/ee/SysConfig.hbm.xml" />
+        <mapping resource="org/jpos/ee/SysLogEvent.hbm.xml" />
+        <mapping resource="org/jpos/ee/User.hbm.xml" />
+        <mapping resource="org/jpos/ee/Visitor.hbm.xml" />
+        <mapping resource="org/jpos/ee/RevisionEntry.hbm.xml" />
+        <mapping resource="org/jpos/ee/ResultCode.hbm.xml" />
+

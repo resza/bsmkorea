@@ -1,0 +1,96 @@
+<!--sh_page.dat-->
+<html><head>
+	<title>Complain/Messaging - Bank Syariah Mandiri</title>
+	<link href="${request.getContextPath()}/css/fileuploader.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="${request.getContextPath()}/js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="${request.getContextPath()}/js/fileuploader-b3b20b1.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	<link rel="shortcut icon" href="https://bsmnet.syariahmandiri.co.id/image/dot.gif">
+	</head>
+<body link="black" vlink="black" alink="black">
+
+
+<form enctype="multipart/form-data" method="post" action="index.php" name="myform_main"> 
+<center>
+
+<table style="margin-top:-30px" border="1" cellpadding="10" cellspacing="0">
+<tbody><tr valign="top">
+<td background="$request.contextPath/images/bg.gif" align="center"><img src='$request.contextPath/images/syariahmandiri.jpg'><font face="arial" size="2pt"><font face="arial" size="2pt"><h2>Complain/Messaging</h2></font><!--sh_wms_login.dat -->
+<table>
+<tbody><tr>
+    
+    <td>
+        <table>
+													<tbody>
+														<tr>
+															<td>To</td>
+
+															<td><font face="arial" size="2pt"> : </font></td>
+															<td><font face="arial" size="2pt"><input
+																	name="7159c575f6b7273457bc9dc8d05dc727" size="20"
+																	type="text"></font></td>
+														</tr>
+														<tr>
+															<td>Subject</td>
+
+															<td><font face="arial" size="2pt"> : </font></td>
+															<td><font face="arial" size="2pt"><input
+																	name="b1c032bd5112009629ce400f94595048" size="20"
+																	type="password"></font></td>
+														</tr>
+														<tr>
+															<td>Content</td>
+
+															<td>:</td>
+															<td><textarea id="content" name="content" cols="60" rows="15">#if($merchant.address)$merchant.address #end</textarea></td>
+														</tr>
+														<tr>
+															<td>Attachement</td>
+															<td>:</td>
+															<td> 
+		<div id="file-uploader">
+            <noscript>
+                <p>Please enable JavaScript to use file uploader.</p>
+            </noscript>
+        </div>
+        <div>
+            <script type="text/javascript">
+                jQuery(
+                function createUploader(){
+                    var uploader = new qq.FileUploader({
+                        element: document.getElementById('file-uploader'),
+                        //action: 'OctetStreamReader'
+                        action: '/upload.do'
+                    });
+                });
+            </script>
+        </div></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+</tr>
+</tbody></table>
+<p>
+
+
+<input value="S e n d" id="mysubmit" type="submit">
+<input name="cmd" value="LOGIN_PROC" type="hidden"></p>
+  
+
+
+
+  <div style="clear:both;">&nbsp;</div>
+
+</font></td>
+
+</tr>
+</tbody></table>
+
+           
+
+
+
+
+</center></form></body></html>

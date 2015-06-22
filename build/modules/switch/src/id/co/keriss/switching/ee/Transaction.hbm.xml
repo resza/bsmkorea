@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="id.co.keriss.switching.ee">
+  <class name="Transaction">
+  	<id name="id" column="id" type="java.lang.Long">
+  		<generator class="sequence">
+				<param name="sequence">transaction_sequence</param>
+		</generator>
+  	</id>
+  	<property name="transactionid" type="string"></property>
+  	<property name="won" type="java.lang.Long">
+    	<column name="won" sql-type="decimal(13,2)"/>
+    </property>
+    <property name="rupiah" type="java.lang.Long">
+    	<column name="rupiah" sql-type="decimal(13,2)"/>
+    </property><!-- 
+  	<property name="point" type="java.lang.Integer"></property> -->
+  	<property name="sendername" type="string"></property>
+  	<property name="cariername" type="string"></property>
+  	<property name="destinationaccount" type="string"></property>
+  	<property name="destionationbank" type="string"></property>
+  	<property name="timestamp" type="java.util.Date"></property>
+  	<property name="expire" type="java.util.Date"></property>
+  	<property name="status" type="string"></property>
+  	<many-to-one name="point" class="id.co.keriss.switching.ee.Point" not-null="false"/>
+  	<many-to-one name="kurs" class="id.co.keriss.switching.ee.Kurs" not-null="false"/>
+  	<many-to-one name="account" class="id.co.keriss.switching.ee.Account" not-null="false"/>
+  	<many-to-one name="state" class="id.co.keriss.switching.ee.State" not-null="false"/>
+  	<many-to-one name="merchant" class="id.co.keriss.switching.ee.Merchant" not-null="false"/>
+  </class>
+</hibernate-mapping>

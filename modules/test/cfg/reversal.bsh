@@ -1,0 +1,27 @@
+import org.jpos.iso.*;
+import org.jpos.space.*;
+import java.util.Date;
+import org.jpos.iso.ISODate;
+
+Space sp = SpaceFactory.getSpace();
+ISOMsg m = new ISOMsg();
+
+m.setMTI ("0400");
+m.set (2, "1234567890123");                     //Primary Account Number
+m.set (3, "120000");                            //Processing Code
+m.set (4, "596000");                            //Trans Amount
+m.set (7, ISODate.getDateTime(new Date()));     //Trans. Date-Time (MMDDhhmmss)
+m.set (11, "300682");                           //Systems Trace Number
+m.set (12, ISODate.getTime(new Date()));        //Time, local trans
+m.set (13, ISODate.getDate(new Date()));        //Date, local trans
+m.set (22, "23");                                //POS Entry Mode
+m.set (24, "92");                               //NII
+m.set (37, "retref012345");
+m.set (41, "40000002");                         //Terminal ID
+m.set (42, "672066732000002");                  //Merchant ID
+ISOMsg inner62 = new ISOMsg(62);
+    inner62.set (1, "123");
+    inner62.set (2, "300682");//invoice / trace number
+m.set (inner62);
+
+sp.out ("send", m);

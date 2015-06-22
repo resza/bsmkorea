@@ -1,0 +1,8 @@
+PS="$(ps -eF|grep java)"
+if [[ $PS == *"Lounge.jar"* ]]
+then
+  echo "It's there!";
+else
+  echo "Not there";
+  /home/resza/Documents/workspace/lounge/bin/restart;
+fi

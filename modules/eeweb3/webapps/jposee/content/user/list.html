@@ -1,0 +1,36 @@
+<div class="hnav">
+  #parse("repository:fs_repository://user/hnav.html")
+</div>
+
+<br>
+
+<div class="fullpane">
+<table border="1" width="60%" align="left">
+ <tr class="heading">
+  <th align="left">Username</th>
+  <th align="left">Name</th>
+  <th align="left">Permissions</th>
+ </tr>
+
+#foreach( $user in $users)
+    #set($self = "$request.contextPath/user/show.html?id=$user.getId()")
+
+    #if($velocityCount%2==0) 
+        #set ($cl ="odd")
+    #else 
+        #set ($cl = "even")
+    #end
+    <tr class="$cl">
+       <td width="10%">
+        <a href="$self">$user.nick</a>
+       </td>
+       <td width="20%" nowrap>$user.name</td>
+       <td width="50%" nowrap>
+       #if ($user.permissions.size() > 0)
+        $user.permissions
+       #end
+       </td>
+    </tr>
+#end
+</table>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="title">Stores</property>
+    <property name="tab">Stores</property>
+    <property name="perms">login</property>
+    <property name="ajax">bodyOnLoad()</property>
+    <property name="head">store/index.head</property>
+    <property name="search">store/searchbar.html</property>
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="org.jpos.ee.action.store.List" />
+</page>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<server name="microServer" class="org.jpos.q2.iso.QServer" logger="Q2" realm="loungeServer">
+ <attr name="port" type="java.lang.Integer">1413</attr>
+ <attr name="minSessions" type="java.lang.Integer">10</attr>
+<attr name="maxSessions" type="java.lang.Integer">1500</attr>
+ <channel name="microserverChannel" class="org.jpos.iso.channel.NACChannel" packager="org.jpos.iso.packager.ISO87BPackager" logger="Q2" header="6000100000"/>
+ <request-listener class="id.co.keriss.micro.listener.LoungeISOServer" logger="Q2" realm="incoming-request-listener">
+ </request-listener>
+</server>

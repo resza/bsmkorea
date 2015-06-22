@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="title">Lounge/ModuleParameter</property>
+    <property name="tab">module</property>
+    <property name="perms">admin operator bisnisanalyst projectmanager</property>
+	<property name="html">moduleparameter.html</property>    
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="id.co.keriss.switching.action.ModuleParameter" />
+</page>

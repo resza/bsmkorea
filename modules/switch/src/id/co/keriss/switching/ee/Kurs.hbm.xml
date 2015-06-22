@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="id.co.keriss.switching.ee">
+ <class name="Kurs">
+  <id column="id" name="id" type="java.lang.Long">
+   <generator class="sequence">
+    <param name="sequence">kurs_sequence</param>
+   </generator>
+  </id>
+  <property name="wontorp" type="java.lang.Long">
+    	<column name="wontorp" sql-type="decimal(13,2)"/>
+    </property>
+  <property name="timestamp" type="java.util.Date"/>
+  <set name="transaction" inverse="true">
+		<key column="merchant"/>
+		<one-to-many class="id.co.keriss.switching.ee.Transaction"/>
+  </set>
+ </class>
+</hibernate-mapping>

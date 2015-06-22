@@ -1,0 +1,26 @@
+
+## get current tab from Servlet session
+#set($currentTab = $page.tab)
+
+
+## tab macro
+## @param tab name
+## @param url 
+## @param perm required permission
+#macro(tab $name $url $perm)
+ #if ($user.hasPermission($perm))
+ <li #if ($name.equals($currentTab)) class="current" #end ><a href="$url">$name</a></li>
+ #end
+#end
+
+<ul>
+ #if ($user)
+   #tab("System" "$request.contextPath/sys/index.html" "login")
+   #tab("Accounting" "$request.contextPath/gl/index.html" "accounting")
+   ##tab("Merchants" "$request.contextPath/store/index.html" "merchantadmin")
+   #tab("Users" "$request.contextPath/user/list.html" "useradmin")
+ #else
+   <li class="current"><a href="$request.contextPath/login.html">Login</a></li>
+ #end
+</ul>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="perms">login useradmin</property>
+    <property name="tab">Users</property>
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="org.jpos.ee.action.user.Delete" />
+</page>
+

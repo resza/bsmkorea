@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu name="main"> 
+    <node name="System">
+        <node name="SysLog" url="sys/syslog.html"  permissions="login"/>
+        <separator/>
+        <node url="sys/sysconfig.html" name="Configuration" permissions="sysconfig" weight="10"/>
+    </node>
+    <node name="Users" permissions="useradmin" weight="10">
+        <node name="List" url="user/list.html"/>
+        <node name="Add" url="user/add.html"/>
+    </node>
+    <node name="Parameter" permissions="bisnisanalyst" weight="10">
+        <node name="Group Parameter" permissions="bisnisanalyst" url="lounge/groupparameter.html"/>
+        <node name="Force Transaction" permissions="bisnisanalyst" url="lounge/forcetransaction.html"/>
+        <!--node name="Approve" url="lounge/approve.html"/>
+        <node name="Declide" url="lounge/decline.html"/>
+        <node name="Summary" url="lounge/summary.html"/>
+        <node name="Exception" url="lounge/exception.html"/>
+        <node name="Upload" url="lounge/upload.html"/-->
+    </node>
+    <node name="Report" permissions="login projectmanager" weight="10">
+        <!--node name="Group Parameter" url="lounge/groupparameter.html"/>
+        <node name="Force Transaction" url="lounge/forcetransaction.html"/-->
+        <node name="Approve" url="lounge/approve.html"/>
+        <node name="Declide" url="lounge/decline.html"/>
+        <node name="Summary" url="lounge/summary.html"/>
+        <node name="Exception" url="lounge/exception.html"/>
+        <node name="Upload" url="lounge/upload.html"/>
+    </node>
+    
+</menu>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="id.co.keriss.switching.ee">
+  <class name="Cif">
+  	<id name="id" column="id" type="java.lang.Long">
+  		<generator class="sequence">
+				<param name="sequence">cif_sequence</param>
+		</generator>
+  	</id>
+  	<property name="name" type="string"></property>
+  	<property name="birthplace" type="string"></property>
+  	<property name="birthdate" type="string"></property>
+  	<property name="koreanhp" type="string"></property>
+  	<property name="koreanaddr" type="string"></property>
+  	<property name="facebookid" type="string"></property>
+  	<property name="email" type="string"></property>
+  	<property name="identificationpaper" type="string"></property>
+  	<property name="idtype" type="string"></property>
+  	<property name="mothername" type="string"></property>
+  	<property name="fathername" type="string"></property>
+  	<property name="indonesiaaddr" type="string"></property>
+  	<many-to-one name="user" class="org.jpos.ee.User" not-null="false"/>
+  	<set name="attachment" inverse="true">
+		<key column="messaging"/>
+		<one-to-many class="id.co.keriss.switching.ee.Attachment"/>
+  </set>
+  </class>
+</hibernate-mapping>

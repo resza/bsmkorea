@@ -1,0 +1,17 @@
+#*
+#if ($user.hasPermission("useradmin"))
+  <a class="navbar" href="list.html">List</a>&nbsp;&nbsp;
+  <a class="navbar" href="add.html">Add</a>
+#end
+#if ($message)
+   &nbsp;&nbsp;&nbsp;<span class="rblue" align="center">$message</span>
+#end
+#if ($errors)
+   <ul>
+   #foreach ($error in $errors)
+     <li class="red">$error</li>
+   #end
+   </ul>
+#end
+
+*#

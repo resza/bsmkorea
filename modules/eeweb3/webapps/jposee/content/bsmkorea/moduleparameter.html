@@ -1,0 +1,142 @@
+
+<div class="content-main">
+ <form name=moduleparam action="${request.getContextPath()}/lounge/$page.html" method="POST"
+ autocomplete="off">
+  <table cellpadding='0' cellspacing='1'>
+  <th>
+  <tr>
+    <td align="center" colspan="3">MODULE PERMISION</td>
+     <td align="left">
+     </td>
+   </tr>
+   <tr>
+    <td align="center" colspan="3"></td>
+     <!--td align="left" style="width: 85px; ">&nbsp;&nbsp;&nbsp;&nbsp;#if($time)$time #end
+     </td-->
+     <td align="left" style="width: 85px; ">&nbsp;&nbsp;&nbsp;&nbsp;<span id='ct' ></span>
+     </td>
+   </tr>
+   <tr>
+    <td colspan="4">
+     </td>
+   </tr>
+   <tr>
+   <td class="label" align="right" style="width: 114px; ">
+   </td>
+   <td class="label" align="center">
+   </td>
+   <td class="label" align="left"> 
+   </td>
+   <td class="label" align="right" style="width: 150px; ">
+   </td>
+   </tr>
+   <tr>
+    <td class="label" align="right" style="width: 114px; ">
+   	</td>
+   	<td class="label" align="center">
+   	</td>
+   	<td class="label" align="left">
+   	</td>
+   	<td class="label" align="right" style="width: 150px; ">
+   	</td>
+   </tr>
+   <tr>
+    <td colspan="4"></td>
+   </tr>
+  </th>
+  <tr>
+   <td class="label" align="left">Name :</td>
+   <td class="input">$name</td>
+  </tr>
+  <tr>
+   <td class="input"></td>
+   <td class="input"></td>
+  </tr>
+  <tr>
+   <td class="input"></td>
+   <td class="input"></td>
+  </tr>
+  <tr><td colspan="2"></td></tr>
+   <tr>
+   <td colspan="2"></td>
+   </tr>
+<tr class="#rowClass()">
+   <td colspan="2" class="label" align="center">
+    <table>
+     <tr>
+     #foreach($p in $roles)
+      <td colspan="2" width="30%" align="left">
+       $velocityCount
+       <input type="checkbox" name="_perm_$p.name"
+        #if($p.auth) checked #end &nbsp;<b>$p.name</b>
+       </input>
+      </td>
+      #if ($velocityCount%2==0)
+       </tr>
+       <tr>
+      #end
+     #end>
+     </tr>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" align="left">
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" align="left">
+   </td>
+  </tr>
+  <tr>
+   
+  </tr>
+  <tr class="#rowClass()">
+   <td colspan="2" class="hnav" align="right">
+    <input name="action" src="${request.getContextPath()}/images/go.gif" class="goButton" type="image" value="save">&nbsp;&nbsp;
+   </td>
+  </tr>
+  <input id="id" name="id" type="hidden" value="$id" />
+  <input id="submit" name="submit" type="hidden" value="$id" />
+</form>
+</div>
+#if($childs)
+<table align="left" width="100%" border="0">
+  <tbody>
+	<tr>
+	<td style="background-color: white; color: black; text-align: center;" width="20%"></td>	
+	<td style="background-color: white; color: black; text-align: center; width: 737px">
+	<table align="left" width="100%" border="1" bordercolor="#ffffff" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Module Name</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Permisions</td>
+</tr>
+#foreach( $child in $childs)
+#if($velocityCount%2==0) #set ($cl ="odd")
+#else #set ($cl = "even")
+#end
+<tr class="$cl">
+<td style="width: 150px;" align="center">
+#if($edit)
+<a href="${request.getContextPath()}/lounge/moduleparameter.html?id=$child.id">$child.name
+#else
+$child.name
+#end
+</td>
+<td align="center">$child.perms</td>
+</tr>
+#end
+</tbody>
+</table>
+	</td>
+	<td style="background-color: white; color: black; text-align: center;">  </td>
+	<td style="background-color: white; color: black; text-align: center;"></td>
+	</tr>
+  <tbody>
+</table>
+#end
+<script language="javascript">
+ document.moduleparam.modulename.focus();
+</script>
+

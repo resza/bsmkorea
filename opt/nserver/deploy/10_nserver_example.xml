@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ jPOS Project [http://jpos.org]
+  ~ Copyright (C) 2000-2009 Alejandro P. Revilla
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<server name="ath-bridge-prod" class="org.jpos.q2.nserver.NServer" logger="Q2">
+    <!--
+    <classpath>lib/mina-core-2.0.0-M4.jar</classpath>
+    <classpath>lib/slf4j-api-1.5.0.jar</classpath>
+    <classpath>lib/slf4j-nop-1.5.0.jar</classpath>
+    -->
+    <attr name="port" type="java.lang.Integer">2005</attr>
+
+    <protocol-handler
+            class="org.jpos.q2.nserver.handler.AthHandler"
+            packager="org.jpos.iso.packager.GenericPackager">
+        <property name="packager-config" value="cfg/packager/ath.xml"/>
+    </protocol-handler>
+
+    <!-- Keep-alive timers are in seconds -->
+    <keep-alive-handler class="example.EchoKeepAliveHandler" request-interval="300"/>
+
+    <!-- Replace this with your favorite request listener! -->
+    <request-listener class="com.vmantek.vpay.BridgeRequestListener">
+        <property name="space" value="transient:default"/>
+        <property name="queue" value="txnmgr"/>
+        <property name="timeout" value="60000"/>
+    </request-listener>
+
+</server>

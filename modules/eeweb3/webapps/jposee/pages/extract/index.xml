@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="title">Extract</property>
+    <property name="tab">Extract</property>
+    <property name="perms">login admin</property>
+    <property name="head">extract/index.head</property>
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="org.jpos.ee.action.extract.Extract" />
+</page>
+

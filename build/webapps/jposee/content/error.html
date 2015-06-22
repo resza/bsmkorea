@@ -1,0 +1,11 @@
+<div class="leftpane" align="left">
+ #if ($errors)
+  <h3 align="left">Oops, we found a problem ...</h3>
+  <ul align="left">
+  #foreach ($error in $errors)
+    <li class="red"><b>$error</b></li>
+  #end
+  </ul>
+ #end
+</div>
+<br>

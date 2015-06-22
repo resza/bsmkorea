@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<channel-adaptor name="amexserver-channel-adaptor" class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+ <channel class="org.jpos.iso.channel.NACChannel" packager="org.jpos.iso.packager.GenericPackager" logger="Q2" header="6000100000">
+  <property name="packager-config" value="cfg/jatimas.xml" />
+  <property name="host" value="192.168.0.65"/>
+  <property name="port" value="7443"/>
+ </channel>
+ <in>send</in>
+ <out>receive</out>
+ <reconnect-delay>5000</reconnect-delay>
+</channel-adaptor>

@@ -1,0 +1,178 @@
+
+#set ($rowClasses = ["odd", "even"])
+#macro( rowClass )
+    #if (!$rowCount)
+        #set ($rowCount = 0)
+    #end
+    #set ($idx = $rowCount % 2)
+    $rowClasses.get($idx)
+    #set ($rowCount = $rowCount + 1)
+#end
+
+#macro( selectState $state) 
+  <select name='state'>
+    <option value='' #if (! $state) selected #end>-- Select State --</option>
+    <option value='AL' #if ("$state" == "AL") selected #end>Alabama</option>
+    <option value='AK' #if ("$state" == "AK") selected #end>Alaska</option>
+    <option value='AZ' #if ("$state" == "AZ") selected #end>Arizona</option>
+    <option value='AR' #if ("$state" == "AR") selected #end>Arkansas</option>
+    <option value='CA' #if ("$state" == "CA") selected #end>California</option>
+    <option value='CO' #if ("$state" == "CO") selected #end>Colorado</option>
+    <option value='CT' #if ("$state" == "CT") selected #end>Connecticut</option>
+    <option value='DE' #if ("$state" == "DE") selected #end>Delaware</option>
+    <option value='DC' #if ("$state" == "DC") selected #end>District of Columbia</option>
+    <option value='FL' #if ("$state" == "FL") selected #end>Florida</option>
+    <option value='GA' #if ("$state" == "GA") selected #end>Georgia</option>
+    <option value='HI' #if ("$state" == "HI") selected #end>Hawaii</option>
+    <option value='ID' #if ("$state" == "ID") selected #end>Idaho</option>
+    <option value='IL' #if ("$state" == "IL") selected #end>Illinois</option>
+    <option value='IN' #if ("$state" == "IN") selected #end>Indiana</option>
+    <option value='IA' #if ("$state" == "IA") selected #end>Iowa</option>
+    <option value='KS' #if ("$state" == "KS") selected #end>Kansas</option>
+    <option value='KY' #if ("$state" == "KY") selected #end>Kentucky</option>
+    <option value='LA' #if ("$state" == "LA") selected #end>Louisiana</option>
+    <option value='ME' #if ("$state" == "ME") selected #end>Maine</option>
+    <option value='MD' #if ("$state" == "MD") selected #end>Maryland</option>
+    <option value='MA' #if ("$state" == "MA") selected #end>Massachusetts</option>
+    <option value='MI' #if ("$state" == "MI") selected #end>Michigan</option>
+    <option value='MN' #if ("$state" == "MN") selected #end>Minnesota</option>
+    <option value='MS' #if ("$state" == "MS") selected #end>Mississippi</option>
+    <option value='MO' #if ("$state" == "MO") selected #end>Missouri</option>
+    <option value='MT' #if ("$state" == "MT") selected #end>Montana</option>
+    <option value='NE' #if ("$state" == "NE") selected #end>Nebraska</option>
+    <option value='NV' #if ("$state" == "NV") selected #end>Nevada</option>
+    <option value='NH' #if ("$state" == "NH") selected #end>New Hampshire</option>
+    <option value='NJ' #if ("$state" == "NJ") selected #end>New Jersey</option>
+    <option value='NM' #if ("$state" == "NM") selected #end>New Mexico</option>
+    <option value='NY' #if ("$state" == "NY") selected #end>New York</option>
+    <option value='NC' #if ("$state" == "NC") selected #end>North Carolina</option>
+    <option value='ND' #if ("$state" == "ND") selected #end>North Dakota</option>
+    <option value='OH' #if ("$state" == "OH") selected #end>Ohio</option>
+    <option value='OK' #if ("$state" == "OK") selected #end>Oklahoma</option>
+    <option value='OR' #if ("$state" == "OR") selected #end>Oregon</option>
+    <option value='PA' #if ("$state" == "PA") selected #end>Pennsylvania</option>
+    <option value='RI' #if ("$state" == "RI") selected #end>Rhode Island</option>
+    <option value='SC' #if ("$state" == "SC") selected #end>South Carolina</option>
+    <option value='SD' #if ("$state" == "SD") selected #end>South Dakota</option>
+    <option value='TN' #if ("$state" == "TN") selected #end>Tennessee</option>
+    <option value='TX' #if ("$state" == "TX") selected #end>Texas</option>
+    <option value='UT' #if ("$state" == "UT") selected #end>Utah</option>
+    <option value='VT' #if ("$state" == "VT") selected #end>Vermont</option>
+    <option value='VA' #if ("$state" == "VA") selected #end>Virginia</option>
+    <option value='WA' #if ("$state" == "WA") selected #end>Washington</option>
+    <option value='WV' #if ("$state" == "WV") selected #end>West Virginia</option>
+    <option value='WI' #if ("$state" == "WI") selected #end>Wisconsin</option>
+    <option value='WY' #if ("$state" == "WY") selected #end>Wyoming</option>
+  </select> 
+#end
+
+#macro( selectStateAsString $state)<select name='state'> \
+    <option value='' #if (! $state) selected #end>-- Select State --</option> \
+    <option value='AL' #if ("$state" == "AL") selected #end>Alabama</option> \
+    <option value='AK' #if ("$state" == "AK") selected #end>Alaska</option> \
+    <option value='AZ' #if ("$state" == "AZ") selected #end>Arizona</option> \
+    <option value='AR' #if ("$state" == "AR") selected #end>Arkansas</option> \
+    <option value='CA' #if ("$state" == "CA") selected #end>California</option> \
+    <option value='CO' #if ("$state" == "CO") selected #end>Colorado</option> \
+    <option value='CT' #if ("$state" == "CT") selected #end>Connecticut</option> \
+    <option value='DE' #if ("$state" == "DE") selected #end>Delaware</option> \
+    <option value='DC' #if ("$state" == "DC") selected #end>District of Columbia</option> \
+    <option value='FL' #if ("$state" == "FL") selected #end>Florida</option> \
+    <option value='GA' #if ("$state" == "GA") selected #end>Georgia</option> \
+    <option value='HI' #if ("$state" == "HI") selected #end>Hawaii</option> \
+    <option value='ID' #if ("$state" == "ID") selected #end>Idaho</option> \
+    <option value='IL' #if ("$state" == "IL") selected #end>Illinois</option> \
+    <option value='IN' #if ("$state" == "IN") selected #end>Indiana</option> \
+    <option value='IA' #if ("$state" == "IA") selected #end>Iowa</option> \
+    <option value='KS' #if ("$state" == "KS") selected #end>Kansas</option> \
+    <option value='KY' #if ("$state" == "KY") selected #end>Kentucky</option> \
+    <option value='LA' #if ("$state" == "LA") selected #end>Louisiana</option> \
+    <option value='ME' #if ("$state" == "ME") selected #end>Maine</option> \
+    <option value='MD' #if ("$state" == "MD") selected #end>Maryland</option> \
+    <option value='MA' #if ("$state" == "MA") selected #end>Massachusetts</option> \
+    <option value='MI' #if ("$state" == "MI") selected #end>Michigan</option> \
+    <option value='MN' #if ("$state" == "MN") selected #end>Minnesota</option> \
+    <option value='MS' #if ("$state" == "MS") selected #end>Mississippi</option> \
+    <option value='MO' #if ("$state" == "MO") selected #end>Missouri</option> \
+    <option value='MT' #if ("$state" == "MT") selected #end>Montana</option> \
+    <option value='NE' #if ("$state" == "NE") selected #end>Nebraska</option> \
+    <option value='NV' #if ("$state" == "NV") selected #end>Nevada</option> \
+    <option value='NH' #if ("$state" == "NH") selected #end>New Hampshire</option> \
+    <option value='NJ' #if ("$state" == "NJ") selected #end>New Jersey</option> \
+    <option value='NM' #if ("$state" == "NM") selected #end>New Mexico</option> \
+    <option value='NY' #if ("$state" == "NY") selected #end>New York</option> \
+    <option value='NC' #if ("$state" == "NC") selected #end>North Carolina</option> \
+    <option value='ND' #if ("$state" == "ND") selected #end>North Dakota</option> \
+    <option value='OH' #if ("$state" == "OH") selected #end>Ohio</option> \
+    <option value='OK' #if ("$state" == "OK") selected #end>Oklahoma</option> \
+    <option value='OR' #if ("$state" == "OR") selected #end>Oregon</option> \
+    <option value='PA' #if ("$state" == "PA") selected #end>Pennsylvania</option> \
+    <option value='RI' #if ("$state" == "RI") selected #end>Rhode Island</option> \
+    <option value='SC' #if ("$state" == "SC") selected #end>South Carolina</option> \
+    <option value='SD' #if ("$state" == "SD") selected #end>South Dakota</option> \
+    <option value='TN' #if ("$state" == "TN") selected #end>Tennessee</option> \
+    <option value='TX' #if ("$state" == "TX") selected #end>Texas</option> \
+    <option value='UT' #if ("$state" == "UT") selected #end>Utah</option> \
+    <option value='VT' #if ("$state" == "VT") selected #end>Vermont</option> \
+    <option value='VA' #if ("$state" == "VA") selected #end>Virginia</option> \
+    <option value='WA' #if ("$state" == "WA") selected #end>Washington</option> \
+    <option value='WV' #if ("$state" == "WV") selected #end>West Virginia</option> \
+    <option value='WI' #if ("$state" == "WI") selected #end>Wisconsin</option> \
+    <option value='WY' #if ("$state" == "WY") selected #end>Wyoming</option> \
+  </select>#end
+
+#macro( showState $state) 
+ #if ($state == "AL")Alabama 
+ #elseif ($state == "AK")Alaska
+ #elseif ($state == "AZ")Arizona
+ #elseif ($state == "AR")Arkansas
+ #elseif ($state == "CA")California
+ #elseif ($state == "CO")Colorado
+ #elseif ($state == "CT")Connecticut
+ #elseif ($state == "DE")Delaware
+ #elseif ($state == "DC")District of Columbia
+ #elseif ($state == "FL")Florida
+ #elseif ($state == "GA")Georgia
+ #elseif ($state == "HI")Hawaii
+ #elseif ($state == "ID")Idaho
+ #elseif ($state == "IL")Illinois
+ #elseif ($state == "IN")Indiana
+ #elseif ($state == "IA")Iowa
+ #elseif ($state == "KS")Kansas
+ #elseif ($state == "KY")Kentucky
+ #elseif ($state == "LA")Louisiana
+ #elseif ($state == "ME")Maine
+ #elseif ($state == "MD")Maryland
+ #elseif ($state == "MA")Massachusetts
+ #elseif ($state == "MI")Michigan
+ #elseif ($state == "MN")Minnesota
+ #elseif ($state == "MS")Mississippi
+ #elseif ($state == "MO")Missouri
+ #elseif ($state == "MT")Montana
+ #elseif ($state == "NE")Nebraska
+ #elseif ($state == "NV")Nevada
+ #elseif ($state == "NH")New Hampshire
+ #elseif ($state == "NJ")New Jersey
+ #elseif ($state == "NM")New Mexico
+ #elseif ($state == "NY")New York
+ #elseif ($state == "NC")North Carolina
+ #elseif ($state == "ND")North Dakota
+ #elseif ($state == "OH")Ohio
+ #elseif ($state == "OK")Oklahoma
+ #elseif ($state == "OR")Oregon
+ #elseif ($state == "PA")Pennsylvania
+ #elseif ($state == "RI")Rhode Island
+ #elseif ($state == "SC")South Carolina
+ #elseif ($state == "SD")South Dakota
+ #elseif ($state == "TN")Tennessee
+ #elseif ($state == "TX")Texas
+ #elseif ($state == "UT")Utah
+ #elseif ($state == "VT")Vermont
+ #elseif ($state == "VA")Virginia
+ #elseif ($state == "WA")Washington
+ #elseif ($state == "WV")West Virginia
+ #elseif ($state == "WI")Wisconsin
+ #elseif ($state == "WY")Wyoming
+ #end
+#end
+

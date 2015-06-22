@@ -1,0 +1,121 @@
+
+<div class="content-main">
+ <form name=merchatform action="${request.getContextPath()}/lounge/merchantForm.html" method="POST" enctype="multipart/form-data"
+ autocomplete="off" onsubmit="return validateMerchant()">
+  <table cellpadding='0' cellspacing='1'>
+  <th>
+  <tr>
+    <td align="center" colspan="3">BSM KOREA
+     </td>
+     <td align="left"></td>
+   </tr>
+   <tr>
+    <td align="center" colspan="3">MESSAGE/COMPLAIN FORM</td>
+     <td align="left" style="width: 85px; ">&nbsp;&nbsp;&nbsp;&nbsp;<span id='ct' ></span>
+     </td>
+   </tr>
+   <tr>
+    <td colspan="4">
+     </td>
+   </tr>
+   <tr>
+   <td class="label" align="right" style="width: 114px; ">
+   </td>
+   <td class="label" align="center">
+   </td>
+   <td class="label" align="left"> 
+   </td>
+   <td class="label" align="right" style="width: 150px; ">
+   </td>
+   </tr>
+   <tr>
+    <td class="label" align="right" style="width: 114px; ">
+   	</td>
+   	<td class="label" align="center">
+   	</td>
+   	<td class="label" align="left">
+   	</td>
+   	<td class="label" align="right" style="width: 150px; ">
+   	</td>
+   </tr>
+   <tr>
+    <td colspan="4"></td>
+   </tr>
+  </th>
+  <tr>
+   <td class="label">To :&nbsp;</td>
+   <td class="input"><input type="text" size="8" id="tid" name="tid" maxlength="8" value="#if($merchant.tid)$merchant.tid#end"></td>
+  </tr>
+  <tr>
+   <td class="input">Subject :&nbsp;</td>
+   <td class="input"><input type="text" size="15" id="mid" name="mid" maxlength="15" value="#if($merchant.mid)$merchant.mid#end"></td>
+  </tr>
+  <tr>
+   <td class="input"></td><td class="input"></td>
+  </tr>
+  <tr>
+   <td class="input">Content :&nbsp;</td>
+   <td class="input"><textarea id="address" name="address">#if($merchant.address)$merchant.address #end</textarea>&nbsp;</td>
+  </tr>
+  <tr>
+   <td class="input">Attachement :&nbsp;</td>
+   <td class="input">
+    <div id="file-uploader">
+            <noscript>
+                <p>Please enable JavaScript to use file uploader.</p>
+            </noscript>
+        </div>
+        <div>
+            <script type="text/javascript">
+                jQuery(
+                function createUploader(){
+                    var uploader = new qq.FileUploader({
+                        element: document.getElementById('file-uploader'),
+                        //action: 'OctetStreamReader'
+                        action: 'MultiContentServlet'
+                    });
+                });
+            </script>
+        </div>
+   &nbsp;</td>
+  </tr>
+  <tr>
+   <td colspan="2" align="left">
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" align="left">
+   </td>
+  </tr>
+  <tr>
+   
+  </tr>
+  <tr>
+   <td colspan="2" align="left">
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" align="left">
+   </td>
+  </tr>
+  <tr>
+   <td class="label"></td><td class="label"></td><td class="label"></td><td class="label"></td>
+  </tr>
+  <tr>
+  <td class="label">
+  </td>
+  <td class="label">
+  
+  </td>
+   <td colspan="4" align="right"><input type="submit" name="submit" value="Send"></td>
+  </tr>
+ </table>
+ <input type="hidden" id="id" name="id" value="#if($id)$id#end" />
+<input type="hidden" id="edit" name="edit" value="#if($edit)$edit#end"/>
+</form>
+</div>
+
+<script language="javascript">
+ document.merchatform.tid.focus();
+</script>
+

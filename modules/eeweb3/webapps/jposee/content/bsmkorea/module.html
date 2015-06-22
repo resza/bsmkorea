@@ -1,0 +1,80 @@
+<div style="text-align: center;">PANIN BANK EDC VERIFICATION (PRODUCTION)
+<br>*** MODULE PERMISION ***
+</big></big></big><br>
+<br>
+<span id='ct' ></span> REP DATE:$date
+<br>
+</div>
+<br>
+#if($content)
+<table style="text-align: left; width: 100%;" border="1" bordercolor="#ffffff" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Terminal
+ID</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Batch</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Card</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Approval</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Transaction
+Date</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Total</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Settled</td>
+</tr>
+<tr>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">24423417</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">000215</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">548988______5391</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">Rp.45.000.000</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">14/10/2010</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">Rp.5.000.000</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">24423429</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">000018</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">375531_____5009</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">Rp.
+11.000.000</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">14/10/2010</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">Rp.20.000.000</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+#else
+<table align="left" width="100%" border="0">
+  <tbody>
+	<tr>
+	<td style="background-color: white; color: black; text-align: center;" width="20%"></td>	
+	<td style="background-color: white; color: black; text-align: center; width: 737px">
+	<table align="left" width="100%" border="1" bordercolor="#ffffff" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Module Name</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Permisions</td>
+</tr>
+#foreach( $module in $modules)
+#if($velocityCount%2==0) #set ($cl ="odd")
+#else #set ($cl = "even")
+#end
+<tr class="$cl">
+<td style="width: 150px;" align="center">
+#if($edit)
+<a href="${request.getContextPath()}/lounge/moduleparameter.html?id=$module.id">$module.name
+#else
+$module.name
+#end
+</td>
+<td align="center">$module.perms</td>
+</tr>
+#end
+</tbody>
+</table>
+	</td>
+	<td style="background-color: white; color: black; text-align: center;">  </td>
+	<td style="background-color: white; color: black; text-align: center;"></td>
+	</tr>
+  <tbody>
+</table>
+
+#end

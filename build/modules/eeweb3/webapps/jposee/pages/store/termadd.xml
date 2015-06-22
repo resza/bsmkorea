@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="title">Stores/Terminal/Add</property>
+    <property name="tab">Stores</property>
+    <property name="perms">admin</property>
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="org.jpos.ee.action.store.TermAdd" />
+</page>
+

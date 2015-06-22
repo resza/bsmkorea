@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="id.co.keriss.switching.ee">
+ <class name="State">
+  <id column="id" name="id" type="java.lang.Long">
+   <generator class="sequence">
+    <param name="sequence">state_sequence</param>
+   </generator>
+  </id>
+  <property name="state" type="string"/>
+  <property name="timestamp" type="java.util.Date"/>
+  <set name="transaction" inverse="true">
+		<key column="merchant"/>
+		<one-to-many class="id.co.keriss.switching.ee.Transaction"/>
+  </set>
+ </class>
+</hibernate-mapping>

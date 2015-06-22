@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="title">CardHolders/Show</property>
+    <property name="tab">CardHolders</property>
+    <property name="perms">login</property>
+    <property name="search">ch/searchbar.html</property>
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="org.jpos.ee.action.cardholder.Show" />
+</page>
+

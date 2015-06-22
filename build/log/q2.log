@@ -1,0 +1,738 @@
+<log realm="Q2.system" at="Mon Jun 22 11:27:15 WIB 2015.324">
+  <info>
+    Q2 started, deployDir=/home/resza/Documents/workspace/bsmkorea/build/deploy
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:15 WIB 2015.340">
+  <info>
+    new classloader [1a268f2] has been created
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:15 WIB 2015.340">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/01_start.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:15 WIB 2015.348">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/02_status_heartbeat.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:17 WIB 2015.266">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/05_micro_server.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:17 WIB 2015.272">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/10_micro_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:17 WIB 2015.276">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/10_txnmgr.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:17 WIB 2015.677">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/20_micro_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:17 WIB 2015.682">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/90_jetty.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Jun 22 11:27:17 WIB 2015.759">
+  <info>
+    deploy:/home/resza/Documents/workspace/bsmkorea/build/deploy/99_sysmon.xml
+  </info>
+</log>
+<log realm="microServer.server" at="Mon Jun 22 11:27:17 WIB 2015.844">
+  <iso-server>
+    listening on port 1413
+  </iso-server>
+</log>
+<log realm="channel/127.0.0.1:1413" at="Mon Jun 22 11:27:17 WIB 2015.848">
+  <connect>
+    127.0.0.1:1413
+  </connect>
+</log>
+<log realm="microServer.server.session/127.0.0.1" at="Mon Jun 22 11:27:17 WIB 2015.849">
+  <session-start/>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.21">
+  <info>
+    txnmgr-0 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.21">
+  <info>
+    txnmgr-5 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.21">
+  <info>
+    txnmgr-4 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.22">
+  <info>
+    txnmgr-3 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.38">
+  <info>
+    txnmgr-2 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.38">
+  <info>
+    txnmgr-1 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.39">
+  <info>
+    txnmgr-17 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.39">
+  <info>
+    txnmgr-24 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.39">
+  <info>
+    txnmgr-16 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.40">
+  <info>
+    txnmgr-15 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.40">
+  <info>
+    txnmgr-14 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.40">
+  <info>
+    txnmgr-13 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.41">
+  <info>
+    txnmgr-12 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.41">
+  <info>
+    txnmgr-9 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.42">
+  <info>
+    txnmgr-39 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.42">
+  <info>
+    txnmgr-10 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.42">
+  <info>
+    txnmgr-48 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.43">
+  <info>
+    txnmgr-53 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.43">
+  <info>
+    txnmgr-58 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.43">
+  <info>
+    txnmgr-8 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.44">
+  <info>
+    txnmgr-7 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.44">
+  <info>
+    txnmgr-6 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.44">
+  <info>
+    txnmgr-64 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.45">
+  <info>
+    txnmgr-63 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.45">
+  <info>
+    txnmgr-62 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.45">
+  <info>
+    txnmgr-61 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.46">
+  <info>
+    txnmgr-60 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.46">
+  <info>
+    txnmgr-90 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.46">
+  <info>
+    txnmgr-57 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.47">
+  <info>
+    txnmgr-56 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.47">
+  <info>
+    txnmgr-55 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.47">
+  <info>
+    txnmgr-54 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.48">
+  <info>
+    txnmgr-52 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.48">
+  <info>
+    txnmgr-51 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.48">
+  <info>
+    txnmgr-50 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.49">
+  <info>
+    txnmgr-49 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.49">
+  <info>
+    txnmgr-47 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.49">
+  <info>
+    txnmgr-46 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.50">
+  <info>
+    txnmgr-45 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.50">
+  <info>
+    txnmgr-44 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.50">
+  <info>
+    txnmgr-43 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.50">
+  <info>
+    txnmgr-42 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.51">
+  <info>
+    txnmgr-40 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.51">
+  <info>
+    txnmgr-41 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.51">
+  <info>
+    txnmgr-11 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.52">
+  <info>
+    txnmgr-38 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.52">
+  <info>
+    txnmgr-37 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.52">
+  <info>
+    txnmgr-36 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.53">
+  <info>
+    txnmgr-25 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.53">
+  <info>
+    txnmgr-35 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.53">
+  <info>
+    txnmgr-34 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.54">
+  <info>
+    txnmgr-33 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.54">
+  <info>
+    txnmgr-32 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.54">
+  <info>
+    txnmgr-31 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.55">
+  <info>
+    txnmgr-30 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.55">
+  <info>
+    txnmgr-29 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.55">
+  <info>
+    txnmgr-28 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.56">
+  <info>
+    txnmgr-27 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.56">
+  <info>
+    txnmgr-26 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.56">
+  <info>
+    txnmgr-22 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.57">
+  <info>
+    txnmgr-23 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.57">
+  <info>
+    txnmgr-20 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.58">
+  <info>
+    txnmgr-21 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.58">
+  <info>
+    txnmgr-19 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.58">
+  <info>
+    txnmgr-18 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.59">
+  <info>
+    txnmgr-99 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.59">
+  <info>
+    txnmgr-98 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.59">
+  <info>
+    txnmgr-97 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.60">
+  <info>
+    txnmgr-96 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.60">
+  <info>
+    txnmgr-95 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.60">
+  <info>
+    txnmgr-94 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.61">
+  <info>
+    txnmgr-93 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.61">
+  <info>
+    txnmgr-92 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.61">
+  <info>
+    txnmgr-91 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.61">
+  <info>
+    txnmgr-59 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.62">
+  <info>
+    txnmgr-89 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.62">
+  <info>
+    txnmgr-88 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.62">
+  <info>
+    txnmgr-87 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.63">
+  <info>
+    txnmgr-86 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.63">
+  <info>
+    txnmgr-85 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.63">
+  <info>
+    txnmgr-84 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.64">
+  <info>
+    txnmgr-83 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.64">
+  <info>
+    txnmgr-78 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.64">
+  <info>
+    txnmgr-82 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.65">
+  <info>
+    txnmgr-81 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.65">
+  <info>
+    txnmgr-80 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.65">
+  <info>
+    txnmgr-79 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.66">
+  <info>
+    txnmgr-77 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.66">
+  <info>
+    txnmgr-76 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.66">
+  <info>
+    txnmgr-75 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.67">
+  <info>
+    txnmgr-69 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.68">
+  <info>
+    txnmgr-74 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.68">
+  <info>
+    txnmgr-73 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.68">
+  <info>
+    txnmgr-72 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.68">
+  <info>
+    txnmgr-71 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.69">
+  <info>
+    txnmgr-70 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.69">
+  <info>
+    txnmgr-68 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.69">
+  <info>
+    txnmgr-67 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.70">
+  <info>
+    txnmgr-66 start
+  </info>
+</log>
+<log realm="org.jpos.transaction.TransactionManager" at="Mon Jun 22 11:27:18 WIB 2015.70">
+  <info>
+    txnmgr-65 start
+  </info>
+</log>
+<log realm="org.jpos.q2.qbean.SystemMonitor" at="Mon Jun 22 11:27:18 WIB 2015.419">
+  <info>
+    Starting SystemMonitor
+  </info>
+</log>
+<log realm="org.jpos.q2.qbean.SystemMonitor" at="Mon Jun 22 11:27:18 WIB 2015.423">
+  <info>
+    <release>1.6.4$Revision: 2709 $</release>
+    <memory>
+       freeMemory=43913840
+      totalMemory=71761920
+      inUseMemory=27848080
+    </memory>
+    <threads>
+            delay=0 ms
+          threads=138
+            Thread[Reference Handler,10,system]
+            Thread[Finalizer,8,system]
+            Thread[Signal Dispatcher,9,system]
+            Thread[main,5,main]
+            Thread[Timer-0,5,main]
+            Thread[Timer-1,5,main]
+            Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0,5,main]
+            Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1,5,main]
+            Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2,5,main]
+            Thread[Thread-7,5,main]
+            Thread[Thread-8,5,main]
+            Thread[channel-sender-send,5,main]
+            Thread[channel-receiver-receive,5,main]
+            Thread[txnmgr-0,5,main]
+            Thread[txnmgr-1,5,main]
+            Thread[txnmgr-2,5,main]
+            Thread[txnmgr-3,5,main]
+            Thread[txnmgr-4,5,main]
+            Thread[txnmgr-5,5,main]
+            Thread[txnmgr-6,5,main]
+            Thread[txnmgr-7,5,main]
+            Thread[txnmgr-8,5,main]
+            Thread[txnmgr-9,5,main]
+            Thread[txnmgr-10,5,main]
+            Thread[txnmgr-11,5,main]
+            Thread[txnmgr-12,5,main]
+            Thread[txnmgr-13,5,main]
+            Thread[txnmgr-14,5,main]
+            Thread[txnmgr-15,5,main]
+            Thread[txnmgr-16,5,main]
+            Thread[txnmgr-17,5,main]
+            Thread[txnmgr-18,5,main]
+            Thread[txnmgr-19,5,main]
+            Thread[txnmgr-20,5,main]
+            Thread[txnmgr-21,5,main]
+            Thread[txnmgr-22,5,main]
+            Thread[txnmgr-23,5,main]
+            Thread[txnmgr-24,5,main]
+            Thread[txnmgr-25,5,main]
+            Thread[txnmgr-26,5,main]
+            Thread[txnmgr-27,5,main]
+            Thread[txnmgr-28,5,main]
+            Thread[txnmgr-29,5,main]
+            Thread[txnmgr-30,5,main]
+            Thread[txnmgr-31,5,main]
+            Thread[txnmgr-32,5,main]
+            Thread[txnmgr-33,5,main]
+            Thread[txnmgr-34,5,main]
+            Thread[txnmgr-35,5,main]
+            Thread[txnmgr-36,5,main]
+            Thread[txnmgr-37,5,main]
+            Thread[txnmgr-38,5,main]
+            Thread[txnmgr-39,5,main]
+            Thread[txnmgr-40,5,main]
+            Thread[txnmgr-41,5,main]
+            Thread[txnmgr-42,5,main]
+            Thread[txnmgr-43,5,main]
+            Thread[txnmgr-44,5,main]
+            Thread[txnmgr-45,5,main]
+            Thread[txnmgr-46,5,main]
+            Thread[txnmgr-47,5,main]
+            Thread[txnmgr-48,5,main]
+            Thread[txnmgr-49,5,main]
+            Thread[txnmgr-50,5,main]
+            Thread[txnmgr-51,5,main]
+            Thread[txnmgr-52,5,main]
+            Thread[txnmgr-53,5,main]
+            Thread[txnmgr-54,5,main]
+            Thread[txnmgr-55,5,main]
+            Thread[txnmgr-56,5,main]
+            Thread[txnmgr-57,5,main]
+            Thread[txnmgr-58,5,main]
+            Thread[txnmgr-59,5,main]
+            Thread[txnmgr-60,5,main]
+            Thread[txnmgr-61,5,main]
+            Thread[txnmgr-62,5,main]
+            Thread[txnmgr-63,5,main]
+            Thread[txnmgr-64,5,main]
+            Thread[txnmgr-65,5,main]
+            Thread[txnmgr-66,5,main]
+            Thread[txnmgr-67,5,main]
+            Thread[txnmgr-68,5,main]
+            Thread[txnmgr-69,5,main]
+            Thread[txnmgr-70,5,main]
+            Thread[txnmgr-71,5,main]
+            Thread[txnmgr-72,5,main]
+            Thread[txnmgr-73,5,main]
+            Thread[txnmgr-74,5,main]
+            Thread[txnmgr-75,5,main]
+            Thread[txnmgr-76,5,main]
+            Thread[txnmgr-77,5,main]
+            Thread[txnmgr-78,5,main]
+            Thread[txnmgr-79,5,main]
+            Thread[txnmgr-80,5,main]
+            Thread[txnmgr-81,5,main]
+            Thread[txnmgr-82,5,main]
+            Thread[txnmgr-83,5,main]
+            Thread[txnmgr-84,5,main]
+            Thread[txnmgr-85,5,main]
+            Thread[txnmgr-86,5,main]
+            Thread[txnmgr-87,5,main]
+            Thread[txnmgr-88,5,main]
+            Thread[txnmgr-89,5,main]
+            Thread[txnmgr-90,5,main]
+            Thread[txnmgr-91,5,main]
+            Thread[txnmgr-92,5,main]
+            Thread[txnmgr-93,5,main]
+            Thread[txnmgr-94,5,main]
+            Thread[txnmgr-95,5,main]
+            Thread[txnmgr-96,5,main]
+            Thread[txnmgr-97,5,main]
+            Thread[txnmgr-98,5,main]
+            Thread[txnmgr-99,5,main]
+            Thread[Timer-2,5,main]
+            Thread[btpool0-0,5,main]
+            Thread[btpool0-1,5,main]
+            Thread[btpool0-2,5,main]
+            Thread[btpool0-3 - Acceptor0 SelectChannelConnector@0.0.0.0:8080,5,main]
+            Thread[btpool0-4 - Acceptor1 SelectChannelConnector@0.0.0.0:8080,5,main]
+            Thread[btpool0-5,5,main]
+            Thread[btpool0-6,5,main]
+            Thread[btpool0-7,5,main]
+            Thread[btpool0-8,5,main]
+            Thread[btpool0-9,5,main]
+            Thread[Timer-3,5,main]
+            Thread[Timer-4,5,main]
+            Thread[Store default Spool Thread,2,main]
+            Thread[Store default Expiry Thread,1,main]
+            Thread[Thread-124,5,main]
+            Thread[Timer-5,5,main]
+            Thread[SystemMonitor,5,main]
+            Thread[PooledThread-0-running,5,ThreadPool-0]
+            Thread[PooledThread-1,5,ThreadPool-0]
+            Thread[PooledThread-2,5,ThreadPool-0]
+            Thread[PooledThread-3,5,ThreadPool-0]
+            Thread[PooledThread-4,5,ThreadPool-0]
+            Thread[PooledThread-5,5,ThreadPool-0]
+            Thread[PooledThread-6,5,ThreadPool-0]
+            Thread[PooledThread-7,5,ThreadPool-0]
+            Thread[PooledThread-8,5,ThreadPool-0]
+            Thread[PooledThread-9,5,ThreadPool-0]
+    </threads>
+    --- name-registrar ---
+      tspace:default: org.jpos.space.TSpace
+        <key>$TAILLOCK.16529190</key>
+        <keycount>1</keycount>
+      miroserver-channel-adaptor: org.jpos.q2.iso.ChannelAdaptor
+        tx=0, rx=0, connects=1
+      logger.Q2: org.jpos.util.Logger
+      jdbm:txnmgr: org.jpos.space.JDBMSpace
+      channel.miroserver-channel-adaptor: org.jpos.iso.channel.NACChannel
+      mux.loungeservermux: org.jpos.q2.iso.QMUX
+        tx=0, rx=0, tx_expired=0, tx_pending=0, rx_expired=0, rx_pending=0, rx_unhandled=0, rx_forwarded=0, connected=true
+      txnmgr: org.jpos.transaction.TransactionManager
+      server.microServer: org.jpos.iso.ISOServer
+        connected=1, rx=0, tx=0
+          127.0.0.1:34566: rx=0, tx=0
+  </info>
+</log>

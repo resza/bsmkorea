@@ -1,0 +1,38 @@
+<project name="BsmKorea-ee" basedir="../.." default="config">
+ <property file="build.properties"/>
+ <property name="module.name" value="switch" />
+ <property name="module.cfg.dir" value="${modules.dir}/${module.name}/cfg"/>
+ <property name="module.lib.dir" value="${build.dir}/lib"/>
+ <property name="module.src.dir" value="${modules.dir}/${module.name}/src"/>
+ <target name="prepare"></target>
+ <target name="config"><filter filtersfile="${target}.properties" />
+ 	<echo message="Copying needed configuration" />
+ 	<!--copy file="${build.src}/org/jpos/ee/Constants.tmp"
+ 	      tofile="${build.src}/org/jpos/ee/Constants.java"
+ 	      filtering="true" /-->
+ </target>
+	
+
+	<path id="toolslib">
+		<fileset dir="${module.lib.dir}">
+		       <include name="*.jar"/>
+		</fileset>
+		<pathelement location="${build.dir}/classes"/>
+	</path>
+	
+	<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="toolslib"/>
+		<target name="generatepojo" depends="config">
+		    	<echo message="Generate Java source code from the Hibernate mapping files"/>
+		        <hibernatetool destdir="${module.src.dir}">
+		        	<configuration configurationfile="${build.dir}/classes/hibernate.cfg.xml" /> 
+		        	<hbm2java/>
+		        </hibernatetool>
+		</target>
+	    <target name="schema" depends="config">
+	    	<echo message="generating schema........"/>
+	        <hibernatetool destdir="${build.dir}">
+	            <configuration configurationfile="${build.dir}/cfg/hibernate.cfg.xml" />
+	        	<hbm2ddl drop="true" create="true" export="true" update="true" haltonerror="true" delimiter=";" outputfilename="bsmkkoreaj.sql"/>
+	        </hibernatetool>
+	    </target>
+</project>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+#parse("repository:fs_repository://inc/macros.html")
+#parse("repository:fs_repository://navigation/menu-macro.html")
+<html>
+ <head>
+  <title>jPOS-EE $page.title</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      $fs_repository.get("navigation/menu-head.html")
+  <style type="text/css" media="all">
+   @import "$request.contextPath/style.css";
+   body {
+    background:#fff;
+    margin: 0;
+    padding:0;
+    color:#000;
+    font:x-small/1.5em Verdana, Arial, Helvetica, sans-serif;
+    voice-family: "\"}\""; voice-family:inherit;
+    font-size: 75%;
+   }
+  </style>
+
+
+  #if ($request.getParameter("refresh"))
+   #set ($refresh = $request.getParameter("refresh"))
+  <meta http-equiv='refresh' content="$refresh" >
+  #end
+  <meta http-equiv='Pragma' content="no-cache" />
+  <meta http-equiv='Expires' content="-1" />
+
+  #if ($page.head)
+  $fs_repository.get(${page.head})
+  #end
+ </head>
+ <body #if ($page.ajax) onload="javascript:$page.ajax" #end>
+  <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+   <tr>
+    <td align='center' valign='top' nowrap>
+     <a href='http://jpos.org'><img src='$request.contextPath/images/jpos_t.jpg' border='0'/></a>
+    </td>
+    <td valign='top' width='100%'>
+     <div class="topcontent">
+      <div class="topbar">
+		 #parse("repository:fs_repository://inc/topbar.html")       
+      </div>
+       #if ($page.search)
+        <div class="searchbar" align="right">
+         #parse("repository:fs_repository://${page.search}")
+        </div>
+       #end
+     </div>
+    </td>
+   </tr>
+  </table>
+
+##  <div class="tabs">
+##		#parse("repository:fs_repository://navigation/tabs.html")
+##  </div>
+		#parse("repository:fs_repository://navigation/menu.html")
+
+  $fs_repository.get(${page.Path})
+
+ </body>
+</html>
+

@@ -1,0 +1,31 @@
+<project name="minigl" basedir="../..">
+ <property file="build.properties"/>
+ <property name="module.name" value="minigl" />
+ <property name="dist.dir"    value="dist"/>
+ <property name="build.dir"   value="build"/>
+ <property name="modules.dir" value="modules"/>
+ <property name="build.src"   value="${build.dir}/src"/>
+ <property name="build.lib"   value="${build.dir}/lib"/>
+ <property name="build.cfg"   value="${build.dir}/cfg"/>
+ <property name="classes.dir"   value="${build.dir}/classes"/>
+ <property name="module.lib.dir" value="${modules.dir}/${module.name}/lib"/>
+ <property name="module.cfg.dir" value="${modules.dir}/${module.name}/cfg"/>
+ <property name="jpos.home" value="http://jpos.org/ee" />
+
+
+ <target name="prepare">
+  <copy 
+   file="${module.cfg.dir}/ehcache.xml" 
+   tofile="${build.dir}/classes/ehcache.xml" overwrite="true" />
+ </target>
+
+ <target name="setup" />
+
+ <target name="dist">
+  <zip zipfile="${dist.dir}/${module.name}.zip" basedir="${modules.dir}"
+       includes="${module.name}/**"> 
+       <exclude name="**/doc/**" />
+   </zip>
+ </target>
+</project>
+

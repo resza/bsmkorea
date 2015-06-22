@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="id.co.keriss.switching.ee">
+  <class name="MGroup">
+  	<id name="mgroup_id" column="mgroup_id" type="java.lang.Long">
+  		<generator class="sequence">
+				<param name="sequence">group_sequence</param>
+		</generator>
+  	</id>
+  	<property name="name" type="string"></property>
+  	<property name="location" type="string"></property>
+  	<property name="defaultprod" type="string" length="4"></property>
+  	<set name="merchant" inverse="true">
+		<key column="mgroup"/>
+		<one-to-many class="id.co.keriss.switching.ee.Merchant"/>
+	</set>
+	<set name="product" inverse="true">
+		<key column="mgroup"/>
+		<one-to-many class="id.co.keriss.switching.ee.Product"/>
+	</set>
+	</class>
+</hibernate-mapping>

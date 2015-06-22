@@ -1,0 +1,57 @@
+#set ($height = "height='24px'")
+
+<div class="hnav">
+ #parse("repository:fs_repository://sys/hnav.html")
+</div>
+
+<br>
+<div class="halfpane">
+ <table border="0" cellspacing="0" width="65%">
+  <tr $height>
+   <th colspan="3" align="left">CardType Information<hr/></th>
+  </tr>
+  <tr $height>
+   <td class="label" align="right" width='35%'>Name: &nbsp;</td>
+   <td id="statusName" width='25%'>$!cardType.name</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr $height>
+   <td class="label" align="right">End Point: &nbsp;</td>
+   <td id="statusGroup">$!cardType.endPoint</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr $height>
+   <td class="label" align="right">Floor limit: &nbsp;</td>
+   <td id="statusGroup" align="right">$!cardType.floor</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr $height>
+   <td class="label" align="right">Stand-In floor limit: &nbsp;</td>
+   <td id="statusGroup" align="right">$!cardType.standInFloor</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr $height>
+   <td valign="top" colspan="2">
+     #foreach ($bin in $cardType.bins)
+      <tr>
+       #if ($velocityCount == 1)
+        <td class="label" align="right" valign="top">Bin ranges: &nbsp;</td>
+       #else
+        <td>&nbsp;</td>
+       #end
+       <td id="statusGroup" align="right">$!bin.start</td>
+       <td id="statusGroup" align="right">&nbsp;&nbsp;$!bin.end</td>
+      </tr>
+     #end
+   </td>
+  </tr>
+  <tr $height>
+   <td colspan="3" align="right">
+    <hr/>
+    <a href="cardtypeedit.html?id=$cardType.id">Edit</a>
+    <a href="cardtypeedit.html?id=$cardType.id&action=delete" onclick='return confirm("You are about to delete card type \"$cardType.name\"\nDo you want to continue?");'>| Delete</a>
+   </td>
+  </tr>
+ </table>
+</div>
+

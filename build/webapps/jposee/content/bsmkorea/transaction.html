@@ -1,0 +1,97 @@
+<div style="text-align: center;"><br><br><br>PANIN BANK EDC VERIFICATION (PRODUCTION)
+<br>*** TRANSACTION LOG ***
+</big></big></big><br>
+<br>
+<span id='ct' ></span> REP DATE:$tdate
+<br>
+</div>
+<br>
+#if($content)
+<table style="text-align: left; width: 100%;" border="1" bordercolor="#ffffff" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Terminal
+ID</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Batch</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Card</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Approval</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Transaction
+Date</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Total</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Settled</td>
+</tr>
+<tr>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">24423417</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">000215</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">548988______5391</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">Rp.45.000.000</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">14/10/2010</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">Rp.5.000.000</td>
+<td style="background-color: rgb(0, 153, 255); text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">24423429</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">000018</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">375531_____5009</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">Rp.
+11.000.000</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">14/10/2010</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">Rp.20.000.000</td>
+<td style="background-color: rgb(153, 204, 255); text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+#else
+<table align="left" width="100%" border="0">
+  <tbody>
+	<tr>
+	<td style="background-color: white; color: black; text-align: center;" width="80%"></td>	
+	<td style="background-color: white; color: black; text-align: center;">Total Record</td>
+	<td style="background-color: white; color: black; text-align: center;"> : </td>
+	<td style="background-color: white; color: black; text-align: center;">$totalrecord</td>
+	</tr>
+  <tbody>
+</table>
+<table align="left" width="100%" border="1" bordercolor="#ffffff" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Card Number</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Merchant</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">City</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">TID</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">MID</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Card Status</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Approval</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Date</td>
+<!-- <td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Customer Transaction</td> -->
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Reason</td>
+<td style="background-color: rgb(51, 102, 102); color: white; text-align: center;">Response</td>
+</tr>
+#foreach( $tran in $trans)
+#if($velocityCount%2==0) #set ($cl ="odd")
+#else #set ($cl = "even")
+#end
+<tr class="$cl">
+<td align="center">$tran.cardno</td>
+<td align="center">$tran.merchant</td>
+<td align="center">$tran.city</td>
+<td align="center">$tran.tid</td>
+<td align="center">$tran.mid</td>
+<td align="center">$tran.status</td>
+<td align="center">$tran.apprv</td>
+<td align="center">$tran.date</td>
+<!-- <td align="center">$tran.used</td> -->
+<td align="center">$tran.until</td>
+<td align="center">
+#set ($success = "SUCCESS")
+#if($tran.transtat==$success)
+<a href="${request.getContextPath()}/lounge/$page.html?reversal=$tran.id">$tran.transtat</a>
+#else
+$tran.transtat
+#end
+</td>
+</tr>
+#end
+</tbody>
+</table>
+#end

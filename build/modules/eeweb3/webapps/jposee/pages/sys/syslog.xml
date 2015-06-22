@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <property name="title">System/SysLog</property>
+    <property name="tab">System</property>
+    <property name="perms">login operator</property>
+    <property name="search">sys/searchbar.html</property>
+    <page-action name="org.jpos.ee.action.CheckAccess" />
+    <page-action name="org.jpos.ee.action.sys.SysLog" />
+</page>
+

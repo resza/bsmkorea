@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="show_sql">false</property>
+        <property name="format_sql">false</property>
+        <property name="use_sql_comments">true</property>
+        <property name="generate_statistics">false</property>
+        <property name="max_fetch_depth">2</property>
+        <property name="default_batch_fetch_size">16</property>
+        <property name="use_streams_for_binary">true</property>
+        <property name="connection.isolation">2</property>
+
+        <property name="hibernate.c3p0.min_size">2</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">300</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+        <property name="hibernate.cache.use_structured_entries">true</property>
+
+        <!-- opt/hibernate_postgresql/cfg/_hibernate.cfg.properties -->
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+
+	<property name="connection.url">jdbc:postgresql:bsmkoreaj</property>
+        <property name="connection.username">resza</property>
+        <property name="connection.password">admin</property>
+
+
+        <mapping resource="org/jpos/ee/SysConfig.hbm.xml" />
+        <mapping resource="org/jpos/ee/SysLogEvent.hbm.xml" />
+        <mapping resource="org/jpos/ee/User.hbm.xml" />
+        <mapping resource="org/jpos/ee/Visitor.hbm.xml" />
+        <mapping resource="org/jpos/ee/RevisionEntry.hbm.xml" />
+        <mapping resource="org/jpos/ee/ResultCode.hbm.xml" />
+
+  
+        <mapping resource="org/jpos/ee/status/Status.hbm.xml" />
+        <mapping resource="org/jpos/ee/status/StatusTag.hbm.xml" />
+
+	<mapping resource="id/co/keriss/switching/ee/Account.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Attachment.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/CIF.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Kurs.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Log.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Merchant.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Messaging.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/MGroup.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Module.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Moduleperm.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Point.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Product.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Role.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Share.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/ShareTransaction.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/State.hbm.xml" />
+	<mapping resource="id/co/keriss/switching/ee/Transaction.hbm.xml" />    </session-factory>
+</hibernate-configuration>
+

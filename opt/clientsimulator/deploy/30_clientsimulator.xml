@@ -1,0 +1,34 @@
+<qbean name="clientSimulator" logger="Q2" realm="client-simulator"
+  class="org.jpos.simulator.TestRunner">
+
+  <property name="mux"     value="clientsimulator-mux" />
+  <property name="timeout" value="30000" />
+  <property name="sessions" value="1" />
+
+  <init>
+    import java.util.Date;
+    import org.jpos.iso.ISODate;
+    int cnt = 1;
+    String terminal = "29110001";
+    String previousTrace = "000000";
+
+    String get_date() {
+        return ISODate.getDateTime(new Date());
+    }
+    String get_date (String format) {
+        return ISODate.formatDate (new Date(), format);
+    }
+  </init>
+
+
+  <test-suite>
+   <path>cfg/</path>
+   <test file="echo" count="20" continue="yes" name="Simple Echo Test">
+    <init>// print ("Init Script");</init>
+    <post>// print ("Post Script");</post>
+   </test>
+   <test file="echo" count="1" continue="yes" name="Simple Echo Test 2" />
+  </test-suite>
+
+</qbean>
+

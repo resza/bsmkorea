@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td>
+<br><br><br><form name="nav" action="${request.contextPath}/lounge/$page.html" method="post" autocomplete="off">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="1">
+<tbody>
+#if($content)
+<tr>
+<td style="width: 10px;"></td>
+<td style="width: 80px;">
+</td>
+<td style="width: 120px;">
+</select>
+</td>
+<td style="width: 60px;">Date :</td>
+<td style="width: 161px;"><input value="09/28/2015" name="fromdate"></td>
+<td style="width: 31px;">
+<script language="JavaScript">
+new tcal ({
+// form name
+'formname': 'nav',
+// input name
+'controlname': 'fromdate'
+});
+</script></td>
+<td style="width: 196px;"><input value="09/28/2015" name="todate"></td>
+<td style="width: 52px;">
+<script language="JavaScript">
+new tcal ({
+// form name
+'formname': 'nav',
+// input name
+'controlname': 'todate'
+}); </script>
+</td>
+<td style="width: 19px;"><input name="action" src="${request.getContextPath()}/images/go.gif" class="goButton" value="Send" type="image">
+</td>
+</tr>
+#else
+
+<!-- Begin Add -->
+
+<tr>
+<td style="width: 10px;"></td>
+<td style="width: 80px;" align="center">Merchant :</td>
+<td style="width: 120px;" align="center">TID :</td>
+<td style="width: 120px;" align="center">MID :</td>
+<td style="width: 120px;" align="center">Card :</td>
+<td style="width: 120px;" align="center">Status :</td>
+<td style="width: 70px;" align="center" colspan="5" rowspan="1"
+>Date :</td>
+<!-- <td style="width: 161px;"></td>
+<td style="width: 31px;"></td>
+<td style="width: 196px;"></td>
+<td style="width: 52px;"></td>
+<td style="width: 19px;"></td>
+-->
+</tr>
+
+<!-- End add -->
+
+<tr>
+<td style="width: 10px;"></td>
+<td style="width: 80px;" align="center">
+<input name="merchant" id="merchant" value="#if($merchant)$merchant#end"></td>
+<td style="width: 120px;" align="center">
+<input name="tid" id="tid" value="#if($tid)$tid#end"></td>
+<td style="width: 120px;" align="center">
+<input name="mid" id="mid" value="#if($mid)$mid#end"></td>
+<td style="width: 120px;" align="center">
+<input name="card" id="card" value="#if($card)$card#end"></td>
+
+<td style="width: 70px;">
+	<select name="status" onchange="nav.submit();">
+	 #if($status==1)#set($select1="selected=\"selected\"")#end
+     #if($status==2)#set($select2="selected=\"selected\"")#end
+     #if($status==3)#set($select3="selected=\"selected\"")#end
+     #if($status==4)#set($select4="selected=\"selected\"")#end
+         <option value="0">All</option>
+        <option value="1" $select1>Approve</option>
+        <option value="2" $select2>Exception</option>
+        <option value="3" $select3>Decline</option>
+        <option value="4" $select4>Upload</option>
+    </select>
+</td>
+<td style="width: 161px;"><input value=$from name="fromdate"></td>
+<td style="width: 31px;">
+<script language="JavaScript">
+new tcal ({
+// form name
+'formname': 'nav',
+// input name
+'controlname': 'fromdate'
+});
+</script></td>
+<td style="width: 196px;"><input value=$to name="todate"></td>
+<td style="width: 52px;">
+<script language="JavaScript">
+new tcal ({
+// form name
+'formname': 'nav',
+// input name
+'controlname': 'todate'
+}); </script>
+</td>
+<td style="width: 19px;"><input name="action" src="${request.getContextPath()}/images/go.gif" class="goButton" value="Send" type="image">
+</td>
+</tr>
+#end
+</tbody>
+</table>
+<input id="template" name="template" type="hidden" value=""/>
+<input id="report" name="report" type="hidden" value= />
+</form>
+</td>
+</tr>
+</tbody>
+</table>

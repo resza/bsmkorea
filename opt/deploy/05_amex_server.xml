@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<server name="amexServer" class="org.jpos.q2.iso.QServer" logger="Q2">
+ <attr name="port" type="java.lang.Integer">7443</attr>
+ <attr name="minSessions" type="java.lang.Integer">10</attr>
+<attr name="maxSessions" type="java.lang.Integer">1500</attr>
+ <channel name="amexserverChannel" class="org.jpos.iso.channel.NACChannel" packager="org.jpos.iso.packager.GenericPackager" logger="Q2" header="6000100000">
+ 	<property name="packager-config" value="cfg/jatimas.xml" />
+ </channel>
+ <request-listener class="org.jpos.keriss.wom.JatimasISOServer" logger="Q2" realm="incoming-request-listener">
+ </request-listener>
+</server>

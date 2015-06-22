@@ -1,0 +1,73 @@
+
+<div class="leftpane">
+ <script src="${request.getContextPath()}/js/md5.js" type="text/javascript"></script>
+ <script src="${request.getContextPath()}/js/cookies.js" type="text/javascript"></script>
+ <script type="text/javascript">
+<!--
+function doHash(frm) {
+    var username = frm.username.value;
+    var password = frm.password.value;
+
+    if (username.length < 3 || password.length < 3) {
+        alert ("Invalid Username and/or Password.");
+        return false;
+    }
+    var hash     = frm.hash.value;
+    var seed     = readCookie ("JSESSIONID") + hash;
+    var pass     = hex_md5 (username + password);
+
+    frm.password.readOnly = true;
+    frm.password.value = hex_md5 (seed + pass);
+}
+
+-->
+ </script>
+
+
+ <form name=login action="${request.getContextPath()}/login.html" method="POST"
+ autocomplete="off" onSubmit="return doHash(this)">
+  <table cellpadding='0' cellspacing='1'>
+  <th>
+   <tr>
+    <td colspan="2">
+     #if ($errors)
+        <h2 class="red" align="center">Invalid Login - Try again</h2>
+        <!-- $errors -->
+     #else
+        <h2 class="grey" align="center">Please Login</h2>
+     #end
+    </td>
+   </tr>
+  </th>
+  <tr>
+   <td class="label" align="right">Username:&nbsp;&nbsp;</td>
+   <td class="input"><input type="text" name="username" value=""></td>
+  </tr>
+  <tr>
+   <td class="label" align="right">Password:&nbsp;&nbsp;</td>
+   <td class="input"><input type="password" name="password"></td>
+  </tr>
+  <tr><td colspan="2">&nbsp;</td></tr>
+  <tr>
+   <td colspan="2" "label" align="center">
+    <small>Remember me on this computer</small>
+    <input type="checkbox" name="remember" value="yes">&nbsp;
+    <input name="action" src="images/go.gif" class="goButton" type="image" value="Login">&nbsp;&nbsp;
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+   </tr>
+  <tr>
+   <td colspan="2" align="right">
+   </td>
+  </tr>
+ </table>
+ <input type="hidden" name="hash" value="$!hash" />
+</form>
+</div>
+
+<script language="javascript">
+ document.login.username.focus();
+</script>
+

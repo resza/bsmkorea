@@ -1,0 +1,4 @@
+cd /home/resza/Documents/workspace/lounge/bin;
+./stop
+sleep 3
+./start

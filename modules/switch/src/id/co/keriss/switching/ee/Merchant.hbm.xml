@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="id.co.keriss.switching.ee.Merchant" table="merchant">
+   <id name="merchant_id" column="merchant_id" type="java.lang.Long">
+    	<generator class="sequence">
+    		<param name="sequence">merchant_sequence</param>
+    	</generator>
+    </id>
+    <property name="mid" type="string"></property>
+    <property name="name" type="string"></property>
+    <property name="address" type="string"></property>
+    <many-to-one class="id.co.keriss.switching.ee.MGroup" name="mgroup" not-null="false"/>
+   	<set name="transaction" inverse="true">
+		<key column="merchant"/>
+		<one-to-many class="id.co.keriss.switching.ee.Transaction"/>
+	</set>
+	<set name="messaging" inverse="true">
+		<key column="merchant"/>
+		<one-to-many class="id.co.keriss.switching.ee.Messaging"/>
+	</set>
+  </class>
+</hibernate-mapping>

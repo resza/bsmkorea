@@ -1,0 +1,31 @@
+import org.jpos.iso.*;
+import org.jpos.space.*;
+import java.util.Date;
+import org.jpos.iso.ISODate;
+
+Space sp = SpaceFactory.getSpace();
+ISOMsg m = new ISOMsg();
+
+m.setMTI ("0320");
+m.set (2, "0204070125953");                     //Collector ID Number ( from original transaction)
+m.set (3, "120000"); //tidak ada lagi pesan yang dikirim 
+//atau m.set (3, "120001");//masih ada lagi pesan yang dikirim
+
+m.set (4, "000000638000");                            //Trans Amount ( from original transaction)
+m.set (7, ISODate.getDateTime(new Date()));     //Trans. Date-Time (MMDDhhmmss) ( from original transaction)
+m.set (11, "000188");                           //Systems Trace Number
+m.set (12, ISODate.getTime(new Date()));        //Time, local trans ( from original transaction)
+m.set (13, ISODate.getDate(new Date()));        //Date, local trans ( from original transaction)
+m.set (22, "23");                                //POS Entry Mode ( from original transaction)
+m.set (24, "92");                               //NII ( from original transaction)
+m.set (37, "retref012345"); //Response Code ( from original transaction)
+m.set (38, "123456"); //Auth Id Response ( baru ada di batch ) ( from original transaction)
+m.set (39, "00"); //Response code ( from original transaction)
+m.set (41, "0IN00001");                         //Terminal ID ( from original transaction)
+m.set (42, "672066732000002");                  //Merchant ID ( from original transaction)
+ISOMsg inner62 = new ISOMsg(62);
+    inner62.set (1, "123");
+    inner62.set (2, "300682");//invoice / trace number ( from original transaction)
+m.set (inner62);
+
+sp.out ("sending", m);

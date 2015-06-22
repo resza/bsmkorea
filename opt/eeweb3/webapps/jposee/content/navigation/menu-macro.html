@@ -1,0 +1,24 @@
+
+#macro (placeMenu $m)
+	<!--$m $m.getNodeType() $m.nodeType-->
+	#if($m.nodeType == "separator")
+                        <li class="separator"><a href="javascript:void(0)"><hr /></a></li>
+	#elseif($m.nodeType == "node")
+	<li><a  #if($m.url) href="$request.contextPath/$m.url" #else href="javascript:void(0)" #end ##
+       >  &nbsp $m.display &nbsp ##
+	   
+        #if($m.children.size()>0) ##
+        <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+            <ul >
+            #foreach($mi in $m.iterator())
+                #placeMenu($mi)
+            #end ##foreach($mi in $m)
+            </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+        #else 
+            </a>
+        #end
+          
+    </li>
+	#end
+#end

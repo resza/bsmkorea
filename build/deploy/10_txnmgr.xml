@@ -1,0 +1,42 @@
+<txnmgr class="org.jpos.transaction.TransactionManager" logger="Q2">
+ <property name="queue"            value="TXNMGR" />
+ <property name="sessions"         value="100" />
+ <property name="persistent-space" value="jdbm:txnmgr" />
+ <property name="debug"            value="true" />
+ <property name="timeout"          value="60000" ></property>
+ 	<participant class="org.jpos.transaction.CreateProfiler" logger="Q2" realm="profiler" />
+    <participant class="org.jpos.transaction.Open" logger="Q2" realm="open">
+        <property name="checkpoint" value="open"/>
+        <property name="timeout" value="15000"/>
+    </participant>
+    <participant class="id.co.keriss.switching.participant.SwitchParticipant" logger="Q2" realm="switch">
+		<property name="0800990000" value="test close" />
+		<property name="0100000000" value="default close" />
+		<property name="0200970000" value="default close" />
+		<property name="0200020000" value="default close" />
+		<property name="0500920000" value="default close" />
+		<property name="0400970000" value="default close" />
+		<property name="0400020000" value="default close" />
+		<property name="0320000000" value="default close" />
+		<property name="default" value="default close" />
+	</participant>
+	<participant class="org.jpos.transaction.Close" logger="Q2" realm="close" />
+	<group name="test">
+		<participant class="id.co.keriss.switching.participant.TestParticipant" logger="Q2" realm="test" />
+	</group>
+<!-- 	<group name="reversal">
+		<participant class="id.co.keriss.switching.participant.VerifyReversalParticipant" logger="Q2" realm="reversal" />
+	</group>
+	<group name="void">
+		<participant class="id.co.keriss.switching.participant.VerifyVoidParticipant" logger="Q2" realm="void" />
+	</group>
+	<group name="verify">
+		<participant class="id.co.keriss.switching.participant.VerifyParticipant" logger="Q2" realm="verify" />
+	</group>
+	<group name="setlement">
+		<participant class="id.co.keriss.switching.participant.SetlementParticipant" logger="Q2" realm="settlement" />
+	</group>
+ -->	<group name="default">
+		<participant class="id.co.keriss.switching.participant.TempParticipant" logger="Q2" realm="default" />
+	</group>
+</txnmgr>

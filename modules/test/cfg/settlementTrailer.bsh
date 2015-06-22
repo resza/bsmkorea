@@ -1,0 +1,23 @@
+import org.jpos.iso.*;
+import org.jpos.space.*;
+import java.util.Date;
+import org.jpos.iso.ISODate;
+
+Space sp = SpaceFactory.getSpace();
+ISOMsg m = new ISOMsg();
+
+m.setMTI ("0500");
+m.set (3, "960000");                            //Processing Code
+m.set (7, ISODate.getDateTime(new Date()));     //Trans. Date-Time (MMDDhhmmss)
+m.set (11, "300682");                           //Systems Trace Number
+m.set (24, "92");                               //NII
+m.set (41, "40000002");                         //Terminal ID
+m.set (42, "672066732000002");                  //Merchant ID
+m.set (60, "Batch Number");                     //Batch Number
+ISOMsg inner63 = new ISOMsg(63);
+    inner63.set (1, "123");                     //Harusnya akan menggenerate jumlah byte yang dikandung field 63
+    inner63.set (7, "002");
+    inner63.set (8, "250000");
+m.set (inner63);
+
+sp.out ("send", m);

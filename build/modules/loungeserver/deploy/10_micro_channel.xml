@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<channel-adaptor name="miroserver-channel-adaptor" class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" realm="unionpayChannelAdaptor">
+ <channel class="org.jpos.iso.channel.NACChannel" packager="org.jpos.iso.packager.ISO87BPackager" logger="Q2" header="6000100000">
+ 	<property name="host" value="127.0.0.1"/>
+ 	<property name="port" value="1413"/>
+ </channel>
+ <in>send</in>
+ <out>receive</out>
+ <reconnect-delay>5000</reconnect-delay>
+</channel-adaptor>

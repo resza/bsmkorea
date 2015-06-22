@@ -1,0 +1,77 @@
+<div class="hnav">
+  #parse("repository:fs_repository://user/hnav.html")
+</div>
+
+#set ($rowCount = 0)
+<div class="content-main">
+ <br>
+ <table border="1" width="40%" align="left">
+  <tr class="#rowClass()">
+   <th colspan="2" align="left">User/Show</th>
+  </tr>
+  <tr class="#rowClass()">
+   <td width="10%" class="label">Nick: </td>
+   <td>$u.nick</td>
+  </tr>
+  <tr class="#rowClass()">
+   <td width="10%" class="label">Name: </td>
+   <td>$u.name</td>
+  </tr>
+  <tr class="#rowClass()">
+   <td width="10%" class="label">Permissions: </td>
+   <td>
+    #if ($user.permissions.size() > 0)
+     $u.permissions
+    #end
+   </td>
+  </tr>
+ #if ($u.props.size > 0)
+  <tr class="#rowClass()">
+   <td width="10%" class="label">Properties: </td>
+   <td>$u.props</td>
+  </tr>
+ #end
+  #if ($u.visitors.size() > 0)
+   <tr class="#rowClass()">
+    <td width="10%" class="label">Visitors: </td>
+    <td>
+      #foreach ($visitor in $u.visitors)
+        #set ($host = $visitor.props.get("HOST") )
+        #set ($ip   = $visitor.props.get("IP") )
+        $ip
+        #if (!$ip.equals($host)) ($host) #end
+        &nbsp;&nbsp;<font size="-2">($visitor.lastUpdate)</font>
+        <br>
+      #end
+    </td>
+   </tr>
+  #end
+
+  <tr class="#rowClass()">
+   <td colspan="2" class="hnav" align="right">
+    <a href="edit.html?id=$u.id">Edit</a>
+    #if ($user.id != $u.id)
+    <a href="delete.html?id=$u.id" onclick='return confirm("You are about to delete user \"$u.nick\"\nDo you want to continue?");'>| Delete</a>
+    #end
+   </td>
+  </tr>
+ </table>
+</div>
+
+<div class="fullpane">
+ #if ($u.revisions.size() > 0)
+   <br>
+   <br>
+   <table width="40%">
+     <caption class="rblue">Revision History</caption>
+     #foreach ($r in $u.revisions)
+      <tr>
+       <td>$dateUtil.dateTimeToString($r.date)</td>
+       <td align="right"><b><a href="show.html?id=$r.author.id">($r.author.nick)</a></b></td> </tr> <tr>
+       <td colspan="2"><code>$r.info</code><hr></td>
+      </tr>
+     #end
+   </table>
+ #end
+</div>
+

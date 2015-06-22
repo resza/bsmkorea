@@ -1,0 +1,22 @@
+#set ($msg = $request.getParameter("msg"))
+#if (!$msg)
+ #set ($msg = "Access denied")
+#end
+
+<div class="leftpane" align="center">
+<img src="$request.contextPath/images/police_stop.gif">
+<h1 class="red">$msg</h1>
+<p align="left">
+ <b>Dear $user.name,</b>
+</p>
+<p align="justify">
+ <i>We are sorry, but your permission set doesn't allow 
+ you to access the requested page. If you believe that this
+ is a mistake, please contact the site administrator.</i>
+</p>
+
+<p align="right">
+ <b>--Webmaster</b>
+</p>
+</div>
+

@@ -1,0 +1,39 @@
+import org.jpos.iso.*;
+import org.jpos.space.*;
+import java.util.Date;
+import org.jpos.iso.ISODate;
+
+Space sp = SpaceFactory.getSpace();
+ISOMsg m = new ISOMsg();
+
+m.setMTI ("0200");
+m.set (3, "120000");                            //Processing Code
+m.set (4, "596000");                            //Trans Amount
+m.set (7, ISODate.getDateTime(new Date()));     //Trans. Date-Time (MMDDhhmmss)
+m.set (11, "300682");                           //Systems Trace Number
+m.set (22, "23");                               //POS Entry Mode
+m.set (24, "92");                               //NII
+m.set (35, "123456789012345=0508123456789");    //Track 2 Data
+m.set (41, "40000002");                         //Terminal ID
+m.set (42, "672066732000002");                  //Merchant ID
+
+ISOMsg inner = new ISOMsg(48);                  //Data WOM
+    inner.set(1, "123");                        //Harusnya akan menggenerate jumlah byte yang dikandung field 48
+    inner.set(2, ISOUtil.zeropad("7",4));//indikator produk
+    inner.set(3, ISOUtil.zeropad("10103100507",16));//nomor kontrak
+    inner.set(4, ISOUtil.zeropad("2",2));//jenis pelanggan
+    inner.set(8, ISOUtil.zeropad("13",3));//periode angsuran
+    inner.set(10, ISOUtil.zeropad("275000",12));//nilai total tagihan
+    inner.set(15, ISOUtil.zeropad("250000",12));//nilai pembayaran
+    inner.set(13, ISOUtil.zeropad("10000", 10));//biaya admin -- harusnya menggunakan data dari respon inquiry 
+m.set (inner);
+
+m.set (52, "00000000".getBytes());              //Pin Block
+
+ISOMsg inner62 = new ISOMsg(62);
+    inner62.set (1, "123");
+    inner62.set (2, "300682");//invoice / trace number
+m.set (inner62);
+
+
+sp.out ("send", m);

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu name="main"> 
+    <!--<node name="System">
+        <node name="SysLog" url="sys/syslog.html"  permissions="login"/>
+        <separator/>
+        <node url="sys/sysconfig.html" name="Configuration" permissions="sysconfig" weight="10"/> 
+    	</node>-->
+    <node name="Users" permissions="useradmin" weight="10">
+        <node name="List" permissions="useradmin" url="user/list.html"/>
+        <node name="Add" permissions="useradmin" url="user/add.html"/>
+    </node>
+    <node name="Administration" tab="parametermenu" permissions="admin" weight="10">
+        <node name="Module Permision" tab="module" permissions="admin" url="bsmkorea/module.html"/>
+        <node name="Message/Complain" tab="module" permissions="admin operator login" url="bsmkorea/messagingForm.html"/>
+        <!-- 
+        <node name="Merchant" tab="merchant" permissions="admin" url="lounge/merchant.html"/>
+        <node name="Group" tab="group" permissions="admin" url="lounge/group.html"/>
+        <node name="Card Force Allow" tab="force" permissions="operator bisnisanalyst" url="lounge/force.html"/> -->
+    </node>
+    <!-- <node name="Transaction" tab="transactionmenu" permissions="projectmanager" weight="10">
+        <node name="Transaction Log" tab="transaction" permissions="projectmanager operator" url="lounge/transaction.html"/>
+        <node name="Card Limit" tab="cardlimit" permissions="projectmanager"  url="lounge/cardlimit.html"/>
+        <node name="Summary" tab="summary" permissions="projectmanager"  url="lounge/summary.html"/>
+        <node name="History" tab="inputlog" permissions="projectmanager" weight="10">
+            <node name="Input" tab="inputlog" permissions="admin" url="lounge/inputlog.html"/>
+            <node name="Merchant" tab="merchantlog" permissions="admin" url="lounge/merchantlog.html"/>
+            <node name="Group" tab="grouplog" permissions="admin" url="lounge/grouplog.html"/>
+       </node>
+    </node> -->
+</menu>
+

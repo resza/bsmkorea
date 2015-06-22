@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<status-heartbeat class="org.jpos.ee.status.Heartbeat" logger="Q2">
+ <property name="interval" value="30000" />
+
+ <property name="status-id"      value="heartbeat" />
+ <property name="status-name"    value="System Heartbeat" />
+ <property name="status-group"   value="00_System" />
+ <property name="status-timeout" value="30000" /> 
+ <property name="on-timeout"     value="CRITICAL" />
+</status-heartbeat>
+

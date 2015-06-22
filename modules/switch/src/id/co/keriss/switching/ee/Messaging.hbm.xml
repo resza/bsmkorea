@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="id.co.keriss.switching.ee">
+  <class name="Messaging">
+  	<id name="id" column="id" type="java.lang.Long">
+  		<generator class="sequence">
+				<param name="sequence">massaging_sequence</param>
+		</generator>
+  	</id>
+  	<property name="message" type="string"></property>
+  	<property name="subject" type="string"></property>
+  	<property name="status" type="string"></property>
+  	<property name="voucher" type="string"></property>
+  	<property name="destionationbank" type="string"></property>
+  	<property name="timestamp" type="java.util.Date"></property>
+  	<property name="passemail" type="string"></property>
+  	<many-to-one name="merchant" class="id.co.keriss.switching.ee.Merchant" not-null="false"/>
+  	<many-to-one name="user" class="org.jpos.ee.User" not-null="false"/>
+  	<set name="attachment" inverse="true">
+		<key column="messaging"/>
+		<one-to-many class="id.co.keriss.switching.ee.Attachment"/>
+  	</set>
+  </class>
+</hibernate-mapping>
